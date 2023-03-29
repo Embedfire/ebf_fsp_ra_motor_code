@@ -61,6 +61,9 @@
       <configSetting altId="jtag_fslash_swd.tdi.pa15" configurationId="jtag_fslash_swd.tdi"/>
       <configSetting altId="jtag_fslash_swd.tdo.pb03" configurationId="jtag_fslash_swd.tdo"/>
       <configSetting altId="jtag_fslash_swd.tms.pa13" configurationId="jtag_fslash_swd.tms"/>
+      <configSetting altId="pd01.output.high" configurationId="pd01"/>
+      <configSetting altId="pd03.output.high" configurationId="pd03"/>
+      <configSetting altId="pd04.output.high" configurationId="pd04"/>
     </pincfg>
   </raPinConfiguration>
 </raConfiguration>

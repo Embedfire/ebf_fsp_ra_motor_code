@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<raConfiguration version="3">
+<raConfiguration version="7">
   <generalSettings>
-    <option key="#pinconfiguration#" value="R7FA6T2BD3CFP.pincfg"/>
     <option key="#Board#" value="board.custom"/>
     <option key="CPU" value="RA6T2"/>
     <option key="Core" value="CM33"/>
@@ -9,6 +8,7 @@
     <option key="#TargetARCHITECTURE#" value="cortex-m33"/>
     <option key="#DeviceCommand#" value="R7FA6T2BD"/>
     <option key="#RTOS#" value="_none"/>
+    <option key="#pinconfiguration#" value="R7FA6T2BD3CFP.pincfg"/>
     <option key="#FSPVersion#" value="4.0.0"/>
     <option key="#SELECTED_TOOLCHAIN#" value="com.arm.toolchain"/>
   </generalSettings>
@@ -60,8 +60,8 @@
       <property id="config.bsp.fsp.OFS1.PGA1_pseudo_differential_input" value="config.bsp.fsp.OFS1.PGA1_pseudo_differential_input.disabled"/>
       <property id="config.bsp.fsp.OFS1.PGA2_pseudo_differential_input" value="config.bsp.fsp.OFS1.PGA2_pseudo_differential_input.disabled"/>
       <property id="config.bsp.fsp.OFS1.PGA3_pseudo_differential_input" value="config.bsp.fsp.OFS1.PGA3_pseudo_differential_input.disabled"/>
-      <property id="config.bsp.fsp.BPS.BPS0" value="0U"/>
-      <property id="config.bsp.fsp.PBPS.PBPS0" value="0U"/>
+      <property id="config.bsp.fsp.BPS.BPS0" value=""/>
+      <property id="config.bsp.fsp.PBPS.PBPS0" value=""/>
       <property id="config.bsp.fsp.hoco_fll" value="config.bsp.fsp.hoco_fll.disabled"/>
       <property id="config.bsp.fsp.tfu_mathlib" value="config.bsp.fsp.tfu_mathlib.enabled"/>
       <property id="config.bsp.common.main_osc_wait" value="config.bsp.common.main_osc_wait.wait_8163"/>
@@ -98,13 +98,13 @@
     </config>
   </raBspConfiguration>
   <raClockConfiguration>
-    <node id="board.clock.xtal.freq" mul="10000000" option="_edit"/>
+    <node id="board.clock.xtal.freq" mul="24000000" option="_edit"/>
     <node id="board.clock.hoco.freq" option="board.clock.hoco.freq.20m"/>
     <node id="board.clock.loco.freq" option="board.clock.loco.freq.32768"/>
     <node id="board.clock.moco.freq" option="board.clock.moco.freq.8m"/>
     <node id="board.clock.pll.source" option="board.clock.pll.source.xtal"/>
-    <node id="board.clock.pll.div" option="board.clock.pll.div.1"/>
-    <node id="board.clock.pll.mul" option="board.clock.pll.mul.240"/>
+    <node id="board.clock.pll.div" option="board.clock.pll.div.2"/>
+    <node id="board.clock.pll.mul" option="board.clock.pll.mul.200"/>
     <node id="board.clock.pll.display" option="board.clock.pll.display.value"/>
     <node id="board.clock.pll2.source" option="board.clock.pll2.source.disabled"/>
     <node id="board.clock.pll2.div" option="board.clock.pll2.div.1"/>
@@ -169,31 +169,43 @@
       <originalPack>Renesas.RA_board_custom.4.0.0.pack</originalPack>
     </component>
   </raComponentSelection>
+  <raElcConfiguration/>
   <raIcuConfiguration/>
-  <raMessagingConfiguration/>
   <raModuleConfiguration>
     <module id="module.driver.ioport_on_ioport.0">
       <property id="module.driver.ioport.name" value="g_ioport"/>
+      <property id="module.driver.ioport.elc_trigger_ioport1" value="_disabled"/>
+      <property id="module.driver.ioport.elc_trigger_ioport2" value="_disabled"/>
+      <property id="module.driver.ioport.elc_trigger_ioport3" value="_disabled"/>
+      <property id="module.driver.ioport.elc_trigger_ioport4" value="_disabled"/>
+      <property id="module.driver.ioport.elc_trigger_ioportb" value="_disabled"/>
+      <property id="module.driver.ioport.elc_trigger_ioportc" value="_disabled"/>
+      <property id="module.driver.ioport.elc_trigger_ioportd" value="_disabled"/>
+      <property id="module.driver.ioport.elc_trigger_ioporte" value="_disabled"/>
+      <property id="module.driver.ioport.pincfg" value="g_bsp_pin_cfg"/>
     </module>
     <context id="_hal.0">
       <stack module="module.driver.ioport_on_ioport.0"/>
     </context>
+    <config id="config.driver.ioport">
+      <property id="config.driver.ioport.checking" value="config.driver.ioport.checking.system"/>
+    </config>
   </raModuleConfiguration>
   <raPinConfiguration>
-    <pincfg active="true" name="R7FA6T2BD3CFP.pincfg" symbol="g_bsp_pin_cfg">
-      <configSetting altId="pa13.gpio_mode.gpio_mode_peripheral" configurationId="pa13.gpio_mode"/>
-      <configSetting altId="pa13.jtag_fslash_swd.tms" configurationId="pa13"/>
-      <configSetting altId="pa14.gpio_mode.gpio_mode_peripheral" configurationId="pa14.gpio_mode"/>
-      <configSetting altId="pa14.jtag_fslash_swd.tck" configurationId="pa14"/>
-      <configSetting altId="pa15.gpio_mode.gpio_mode_peripheral" configurationId="pa15.gpio_mode"/>
-      <configSetting altId="pa15.jtag_fslash_swd.tdi" configurationId="pa15"/>
-      <configSetting altId="pb03.gpio_mode.gpio_mode_peripheral" configurationId="pb03.gpio_mode"/>
-      <configSetting altId="pb03.jtag_fslash_swd.tdo" configurationId="pb03"/>
+    <pincfg active="true" name="R7FA6T2BD3CFP.pincfg" selected="true" symbol="g_bsp_pin_cfg">
       <configSetting altId="jtag_fslash_swd.mode.jtag.free" configurationId="jtag_fslash_swd.mode"/>
       <configSetting altId="jtag_fslash_swd.tck.pa14" configurationId="jtag_fslash_swd.tck"/>
       <configSetting altId="jtag_fslash_swd.tdi.pa15" configurationId="jtag_fslash_swd.tdi"/>
       <configSetting altId="jtag_fslash_swd.tdo.pb03" configurationId="jtag_fslash_swd.tdo"/>
       <configSetting altId="jtag_fslash_swd.tms.pa13" configurationId="jtag_fslash_swd.tms"/>
+      <configSetting altId="pa13.jtag_fslash_swd.tms" configurationId="pa13"/>
+      <configSetting altId="pa13.gpio_mode.gpio_mode_peripheral" configurationId="pa13.gpio_mode"/>
+      <configSetting altId="pa14.jtag_fslash_swd.tck" configurationId="pa14"/>
+      <configSetting altId="pa14.gpio_mode.gpio_mode_peripheral" configurationId="pa14.gpio_mode"/>
+      <configSetting altId="pa15.jtag_fslash_swd.tdi" configurationId="pa15"/>
+      <configSetting altId="pa15.gpio_mode.gpio_mode_peripheral" configurationId="pa15.gpio_mode"/>
+      <configSetting altId="pb03.jtag_fslash_swd.tdo" configurationId="pb03"/>
+      <configSetting altId="pb03.gpio_mode.gpio_mode_peripheral" configurationId="pb03.gpio_mode"/>
     </pincfg>
   </raPinConfiguration>
 </raConfiguration>
