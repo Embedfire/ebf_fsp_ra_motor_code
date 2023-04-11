@@ -61,7 +61,9 @@
       <configSetting altId="jtag_fslash_swd.tdi.pa15" configurationId="jtag_fslash_swd.tdi"/>
       <configSetting altId="jtag_fslash_swd.tdo.pb03" configurationId="jtag_fslash_swd.tdo"/>
       <configSetting altId="jtag_fslash_swd.tms.pa13" configurationId="jtag_fslash_swd.tms"/>
+      <configSetting altId="pc08.input" configurationId="pc08"/>
       <configSetting altId="pd01.output.high" configurationId="pd01"/>
+      <configSetting altId="pd02.input" configurationId="pd02"/>
       <configSetting altId="pd03.output.high" configurationId="pd03"/>
       <configSetting altId="pd04.output.high" configurationId="pd04"/>
       <configSetting altId="sci9.rxd9.pd06" configurationId="sci9.rxd9" isUsedByDriver="true"/>

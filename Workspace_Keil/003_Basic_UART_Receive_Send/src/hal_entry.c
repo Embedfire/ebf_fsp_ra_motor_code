@@ -7,6 +7,7 @@ FSP_CPP_FOOTER
 
 /* 用户头文件包含 */
 #include "led/bsp_led.h"
+#include "key/bsp_key.h"
 #include "debug_uart/bsp_debug_uart.h"
 
 
@@ -19,6 +20,7 @@ void hal_entry(void)
     /* TODO: add your own code here */
 
     LED_Init();         // LED 初始化
+    Key_Init(); // 按键初始化
     Debug_UART9_Init(); // SCI9 UART 调试串口初始化
 
     printf("这是一个串口收发回显例程\r\n");

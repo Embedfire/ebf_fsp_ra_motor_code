@@ -7,6 +7,7 @@ FSP_CPP_FOOTER
 
 /* 用户头文件包含 */
 #include "led/bsp_led.h"
+#include "key/bsp_key.h"
 
 
 /*******************************************************************************************************************//**
@@ -18,17 +19,18 @@ void hal_entry(void)
     /* TODO: add your own code here */
 
     LED_Init(); // LED 初始化
+    Key_Init(); // 按键初始化
 
     while(1)
     {
-        LED1_ON; // LED1亮
-        LED2_ON; // LED2亮
-        LED3_ON; // LED3亮
-        R_BSP_SoftwareDelay(1, BSP_DELAY_UNITS_SECONDS); //延时1秒
-        LED1_OFF; // LED1灭
-        LED2_OFF; // LED2灭
-        LED3_OFF; // LED3灭
-        R_BSP_SoftwareDelay(1, BSP_DELAY_UNITS_SECONDS); //延时1秒
+        if(Key_Scan(KEY1_PIN) == KEY_ON)
+        {
+            LED1_TOGGLE;
+        }
+        if(Key_Scan(KEY2_PIN) == KEY_ON)
+        {
+            LED2_TOGGLE;
+        }
     }
 
 

@@ -14,6 +14,8 @@
         <file category="source" name="src/debug_uart/bsp_debug_uart.c"/>
         <file category="header" name="src/debug_uart/bsp_debug_uart.h" path=""/>
         <file category="source" name="src/hal_entry.c"/>
+        <file category="source" name="src/key/bsp_key.c"/>
+        <file category="header" name="src/key/bsp_key.h" path=""/>
         <file category="source" name="src/led/bsp_led.c"/>
         <file category="header" name="src/led/bsp_led.h" path=""/>
       </project_files>

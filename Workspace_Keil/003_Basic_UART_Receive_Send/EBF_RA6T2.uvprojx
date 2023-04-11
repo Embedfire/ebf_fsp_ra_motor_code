@@ -411,6 +411,16 @@
               <FileType>5</FileType>
               <FilePath>.\src\debug_uart\bsp_debug_uart.h</FilePath>
             </File>
+            <File>
+              <FileName>bsp_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\key\bsp_key.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_key.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\key\bsp_key.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

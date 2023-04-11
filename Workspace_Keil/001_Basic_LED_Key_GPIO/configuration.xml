@@ -206,8 +206,12 @@
       <configSetting altId="pa15.gpio_mode.gpio_mode_peripheral" configurationId="pa15.gpio_mode"/>
       <configSetting altId="pb03.jtag_fslash_swd.tdo" configurationId="pb03"/>
       <configSetting altId="pb03.gpio_mode.gpio_mode_peripheral" configurationId="pb03.gpio_mode"/>
+      <configSetting altId="pc08.input" configurationId="pc08"/>
+      <configSetting altId="pc08.gpio_mode.gpio_mode_in" configurationId="pc08.gpio_mode"/>
       <configSetting altId="pd01.output.high" configurationId="pd01"/>
       <configSetting altId="pd01.gpio_mode.gpio_mode_out.high" configurationId="pd01.gpio_mode"/>
+      <configSetting altId="pd02.input" configurationId="pd02"/>
+      <configSetting altId="pd02.gpio_mode.gpio_mode_in" configurationId="pd02.gpio_mode"/>
       <configSetting altId="pd03.output.high" configurationId="pd03"/>
       <configSetting altId="pd03.gpio_mode.gpio_mode_out.high" configurationId="pd03.gpio_mode"/>
       <configSetting altId="pd04.output.high" configurationId="pd04"/>
