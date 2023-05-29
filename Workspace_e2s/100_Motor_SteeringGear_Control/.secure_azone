@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<azone>
+    <rzone name="R7FA6T2BD3CFP.rzone"/>
+    <partition>
+        <peripheral name="PORTA" group="PORT">
+            <slot name="PA13" secure="false"/>
+            <slot name="PA14" secure="false"/>
+            <slot name="PA15" secure="false"/>
+        </peripheral>
+        <peripheral name="PORTB" group="PORT">
+            <slot name="PB03" secure="false"/>
+            <slot name="PB04" secure="false"/>
+            <slot name="PB05" secure="false"/>
+            <slot name="PB14" secure="false"/>
+        </peripheral>
+        <peripheral name="PORTC" group="PORT">
+            <slot name="PC02" secure="false"/>
+        </peripheral>
+        <peripheral name="PORTD" group="PORT">
+            <slot name="PD01" secure="false"/>
+            <slot name="PD03" secure="false"/>
+            <slot name="PD04" secure="false"/>
+            <slot name="PD05" secure="false"/>
+            <slot name="PD06" secure="false"/>
+        </peripheral>
+        <peripheral name="ICU_EXT_IRQ">
+            <slot name="ICU_EXT_IRQ4" secure="false"/>
+            <slot name="ICU_EXT_IRQ13" secure="false"/>
+        </peripheral>
+        <peripheral name="GPT0" group="GPT" security=""/>
+        <peripheral name="ICU">
+            <slot name="IRQ0" secure="false"/>
+            <slot name="IRQ1" secure="false"/>
+            <slot name="IRQ2" secure="false"/>
+            <slot name="IRQ3" secure="false"/>
+            <slot name="IRQ4" secure="false"/>
+            <slot name="IRQ5" secure="false"/>
+        </peripheral>
+    </partition>
+</azone>
