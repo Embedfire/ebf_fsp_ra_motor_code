@@ -233,7 +233,7 @@ void Change(void)
 					GPT_PWM_SetDuty(&motor_v_ctrl, 0, GPT_IO_PIN_GTIOCA);  	
 					R_IOPORT_PinWrite(&g_ioport_ctrl, BSP_IO_PORT_14_PIN_13, BSP_IO_LEVEL_LOW);	
 					
-					GPT_PWM_SetDuty(&motor_w_ctrl, 50, GPT_IO_PIN_GTIOCA);  
+					GPT_PWM_SetDuty(&motor_w_ctrl, speed, GPT_IO_PIN_GTIOCA);  
 					R_IOPORT_PinWrite(&g_ioport_ctrl, BSP_IO_PORT_14_PIN_14, BSP_IO_LEVEL_HIGH); 
 					break;
 				
