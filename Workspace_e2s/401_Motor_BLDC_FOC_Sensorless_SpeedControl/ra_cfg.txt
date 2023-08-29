@@ -354,9 +354,9 @@ FSP Configuration
       
     Instance "Motor Sensorless Vector Control (rm_motor_sensorless)"
       General: Name: g_motor_sensorless0
-      General: Limit of over current (A): 1.96F
-      General: Limit of over voltage (V): 48.0
-      General: Limit of over speed (rpm): 4500.0F
+      General: Limit of over current (A): 5.9F
+      General: Limit of over voltage (V): 48.0F
+      General: Limit of over speed (rpm): 3000.0F
       General: Limit of low voltage (V): 12.0F
       Interrupts: Callback: mtr_callback_event
       
@@ -364,9 +364,9 @@ FSP Configuration
         General: Name: g_motor_speed0
         General: Speed control period (sec): 0.0005F
         General: Step of speed climbing (rpm): 0.5F
-        General: Maximum rotational speed (rpm): 2400.0F
+        General: Maximum rotational speed (rpm): 3000.0F
         General: Speed LPF omega: 10.0F
-        General: Limit of q-axis current (A): 1.96F
+        General: Limit of q-axis current (A): 5.9F
         General: Step of speed feedback at open-loop: 0.2F
         General: Natural frequency: 100.0
         General: Open-loop damping: Enable
@@ -392,9 +392,9 @@ FSP Configuration
         Design parameter: Speed observer omega: 200.0F
         Design parameter: Speed observer zeta: 1.0F
         Motor Parameter: Pole pairs: 2U
-        Motor Parameter: Resistance (ohm): 1.3F
-        Motor Parameter: Inductance of d-axis (H): 0.0013F
-        Motor Parameter: Inductance of q-axis (H): 0.0013F
+        Motor Parameter: Resistance (ohm): 0.42F
+        Motor Parameter: Inductance of d-axis (H): 0.00112F
+        Motor Parameter: Inductance of q-axis (H): 0.00112F
         Motor Parameter: Permanent magnetic flux (Wb): 0.01119F
         Motor Parameter: Rotor inertia (kgm^2): 0.000003666F
         Interrupts: Callback: rm_motor_sensorless_speed_callback
@@ -442,9 +442,9 @@ FSP Configuration
         Design Parameter: Current PI loop omega (Hz): 300.0F
         Design Parameter: Current PI loop zeta: 1.0F
         Motor Parameter: Pole pairs: 2
-        Motor Parameter: Resistance (ohm): 1.3F
-        Motor Parameter: Inductance of d-axis (H): 0.0013F
-        Motor Parameter: Inductance of q-axis (H): 0.0013F
+        Motor Parameter: Resistance (ohm): 0.42F
+        Motor Parameter: Inductance of d-axis (H): 0.00112F
+        Motor Parameter: Inductance of q-axis (H): 0.00112F
         Motor Parameter: Permanent magnetic flux (Wb): 0.01119F
         Motor Parameter: Rotor inertia (kgm^2): 0.000003666F
         
@@ -1234,11 +1234,11 @@ FSP Configuration
           Control period: 0.00005F
           Motor Parameter: Pole pairs: 2U
           Motor Parameter: Resistance[ohm]: 1.3F
-          Motor Parameter: Inductance of d-axis[H]: 0.0013F
-          Motor Parameter: Inductance of q-axis[H]: 0.0013F
+          Motor Parameter: Inductance of d-axis[H]: 0.00112F
+          Motor Parameter: Inductance of q-axis[H]: 0.00112F
           Motor Parameter: Permanent magnetic flux[Wb]: 0.01119F
           Motor Parameter: Rotor inertia[kgm^2]: 0.000003666F
-          Motor Parameter: Nominal current[Arms]: 1.67
+          Motor Parameter: Nominal current[Arms]: 5.9F
           
     Instance "g_poeg0 Port Output Enable for GPT (r_poeg)"
       General: Name: g_poeg0
