@@ -15,6 +15,12 @@ void Debug_UART9_Init(void)
 /* 发送完成标志 */
 volatile bool uart_send_complete_flag = false;
 
+volatile bool uart_recv_motor_enable = false;
+volatile bool uart_recv_motor_disenable = false;
+volatile bool uart_recv_motor_speed_up = false;
+volatile bool uart_recv_motor_speed_down = false;
+volatile bool uart_recv_motor_reverse = false;
+
 
 /* 串口中断回调 */
 void debug_uart9_callback (uart_callback_args_t * p_args)
@@ -23,8 +29,17 @@ void debug_uart9_callback (uart_callback_args_t * p_args)
     {
         case UART_EVENT_RX_CHAR:
         {
-            /* 把串口接收到的数据发送回去 */
-            R_SCI_B_UART_Write(&debug_uart9_ctrl, (uint8_t *)&(p_args->data), 1);
+            if(p_args->data == 's')
+                uart_recv_motor_enable = true;
+            if(p_args->data == 'p')
+                uart_recv_motor_disenable = true;
+            if(p_args->data == 'u')
+                uart_recv_motor_speed_up = true;
+            if(p_args->data == 'd')
+                uart_recv_motor_speed_down = true;
+            if(p_args->data == 'r')
+                uart_recv_motor_reverse = true;
+
             break;
         }
         case UART_EVENT_TX_COMPLETE:
