@@ -27,10 +27,7 @@ void hal_entry(void)
        {
            printf("a0 = %f\r\n", Read_ADC_Voltage_Value());
            R_BSP_SoftwareDelay(500, BSP_DELAY_UNITS_MILLISECONDS); //大概0.5秒钟读取一次
-           LED1_ON;
-           R_BSP_SoftwareDelay(1, BSP_DELAY_UNITS_SECONDS);
-           LED1_OFF;
-           R_BSP_SoftwareDelay(1, BSP_DELAY_UNITS_SECONDS);
+
        }
 
 

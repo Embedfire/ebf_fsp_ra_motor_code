@@ -69,15 +69,10 @@ void Motor_SetAngle(uint32_t angle)
     /* 获得计时器一个周期需要的计数次数 */
     current_period_counts = info.period_counts;
 
-    if(0 <= angle && 180 >= angle)
-    {
-
     /*将脉宽角度转换为定时器计数器数值*/
     angle = (uint32_t)((0.5 + angle / 180.0 * (2.5 - 0.5)) / 20.0 * current_period_counts);
 
     /*将期望角度的数值输入以PWM方式实现*/
     R_GPT_DutyCycleSet(&gear_pwm_ctrl, current_period_counts - angle, GPT_IO_PIN_GTIOCA_AND_GTIOCB);
-
-    }
 
 }
