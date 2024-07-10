@@ -393,7 +393,7 @@
     <module id="module.driver.external_irq_on_icu.782104674">
       <property id="module.driver.external_irq.name" value="Motor1_EA_HU"/>
       <property id="module.driver.external_irq.channel" value="4"/>
-      <property id="module.driver.external_irq.trigger" value="module.driver.external_irq.trigger.trig_rising"/>
+      <property id="module.driver.external_irq.trigger" value="module.driver.external_irq.trigger.trig_both_edge"/>
       <property id="module.driver.external_irq.filter_enable" value="module.driver.external_irq.filter_enable.false"/>
       <property id="module.driver.external_irq.clock_source_div" value="module.driver.external_irq.clock_source_div.clock_source_div_by_64"/>
       <property id="module.driver.external_irq.p_callback" value="motor_hal_callback"/>
@@ -402,7 +402,7 @@
     <module id="module.driver.external_irq_on_icu.1007003362">
       <property id="module.driver.external_irq.name" value="Motor1_EB_HV"/>
       <property id="module.driver.external_irq.channel" value="5"/>
-      <property id="module.driver.external_irq.trigger" value="module.driver.external_irq.trigger.trig_rising"/>
+      <property id="module.driver.external_irq.trigger" value="module.driver.external_irq.trigger.trig_both_edge"/>
       <property id="module.driver.external_irq.filter_enable" value="module.driver.external_irq.filter_enable.false"/>
       <property id="module.driver.external_irq.clock_source_div" value="module.driver.external_irq.clock_source_div.clock_source_div_by_64"/>
       <property id="module.driver.external_irq.p_callback" value="motor_hal_callback"/>
@@ -411,7 +411,7 @@
     <module id="module.driver.external_irq_on_icu.1347671480">
       <property id="module.driver.external_irq.name" value="Motor1_EZ_HW"/>
       <property id="module.driver.external_irq.channel" value="10"/>
-      <property id="module.driver.external_irq.trigger" value="module.driver.external_irq.trigger.trig_rising"/>
+      <property id="module.driver.external_irq.trigger" value="module.driver.external_irq.trigger.trig_both_edge"/>
       <property id="module.driver.external_irq.filter_enable" value="module.driver.external_irq.filter_enable.false"/>
       <property id="module.driver.external_irq.clock_source_div" value="module.driver.external_irq.clock_source_div.clock_source_div_by_64"/>
       <property id="module.driver.external_irq.p_callback" value="motor_hal_callback"/>
