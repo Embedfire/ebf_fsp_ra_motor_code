@@ -98,7 +98,7 @@ FSP Configuration
     PCLKC Div /4
     PCLKD Div /2
     FCLK Div /4
-    CLKOUT Div /1
+    CLKOUT Div /16
     SCISPICLK Div /2
     CANFDCLK Div /6
     GPTCLK Div /2
@@ -404,7 +404,7 @@ FSP Configuration
       Interrupts: FIFO Priorities: Group 3: Priority 12
       Interrupts: FIFO Priorities: Group 4: Priority 12
       Interrupts: FIFO Priorities: Group 5 to 8: Priority 12
-      Digital Filter: ADC 0: Table Entry 1: Sinc Filter (Oversampling Rate = 8)
+      Digital Filter: ADC 0: Table Entry 1: Minimum Phase Filter (Group Delay < 2)
       Digital Filter: ADC 1: Table Entry 1: Sinc Filter (Oversampling Rate = 8)
       Digital Filter: ADC 0: Table Entry 2: Sinc Filter (Oversampling Rate = 8)
       Digital Filter: ADC 1: Table Entry 2: Sinc Filter (Oversampling Rate = 8)
@@ -445,7 +445,7 @@ FSP Configuration
       Programmable Gain Amplifier: Unit 1 - PGAIN1 / PGAVSS1: Single-ended Mode Gain: 2.500
       Programmable Gain Amplifier: Unit 2 - PGAIN2 / PGAVSS2: Single-ended Mode Gain: 2.500
       Programmable Gain Amplifier: Unit 3 - PGAIN3 / PGAVSS3: Single-ended Mode Gain: 2.500
-      User Offset Table: Entry 0: 0
+      User Offset Table: Entry 0: -24625
       User Offset Table: Entry 1: 0
       User Offset Table: Entry 2: 0
       User Offset Table: Entry 3: 0
@@ -453,7 +453,7 @@ FSP Configuration
       User Offset Table: Entry 5: 0
       User Offset Table: Entry 6: 0
       User Offset Table: Entry 7: 0
-      User Gain Table: Entry 0: 0
+      User Gain Table: Entry 0: 0.0298
       User Gain Table: Entry 1: 0
       User Gain Table: Entry 2: 0
       User Gain Table: Entry 3: 0
@@ -461,9 +461,9 @@ FSP Configuration
       User Gain Table: Entry 5: 0
       User Gain Table: Entry 6: 0
       User Gain Table: Entry 7: 0
-      Limiter Clipping: Interrupt Enable: 
-      Limiter Clipping: Table Entry 0: Lower Limit Value: 0
-      Limiter Clipping: Table Entry 0: Upper Limit Value: 0
+      Limiter Clipping: Interrupt Enable: Table 0
+      Limiter Clipping: Table Entry 0: Lower Limit Value: 17712
+      Limiter Clipping: Table Entry 0: Upper Limit Value: 24797
       Limiter Clipping: Table Entry 1: Lower Limit Value: 0
       Limiter Clipping: Table Entry 1: Upper Limit Value: 0
       Limiter Clipping: Table Entry 2: Lower Limit Value: 0
@@ -482,21 +482,21 @@ FSP Configuration
       Virtual Channels: Virtual Channel 0: Channel Select: AN001
       Virtual Channels: Virtual Channel 0: Sampling State Table ID: Sampling State Entry 0
       Virtual Channels: Virtual Channel 0: Channel Gain Table: Disabled
-      Virtual Channels: Virtual Channel 0: Channel Offset Table: Disabled
-      Virtual Channels: Virtual Channel 0: Add/Average Mode: Disabled
-      Virtual Channels: Virtual Channel 0: Add/Average Count: 1-time conversion (Normal Conversion)
+      Virtual Channels: Virtual Channel 0: Channel Offset Table: Offset Entry 0
+      Virtual Channels: Virtual Channel 0: Add/Average Mode: Averaging Mode
+      Virtual Channels: Virtual Channel 0: Add/Average Count: 1024-time conversion (1023 Additions)
       Virtual Channels: Virtual Channel 0: Limit Clip Table Id: Disabled
-      Virtual Channels: Virtual Channel 0: Conversion Data Format Select: 12-bit Data Format
+      Virtual Channels: Virtual Channel 0: Conversion Data Format Select: 16-bit Data Format
       Virtual Channels: Virtual Channel 0: Digital Filter Selection: Disabled
-      Virtual Channels: Virtual Channel 1: Scan Group: None
+      Virtual Channels: Virtual Channel 1: Scan Group: Scan Group 0
       Virtual Channels: Virtual Channel 1: Channel Select: AN003
       Virtual Channels: Virtual Channel 1: Sampling State Table ID: Sampling State Entry 0
       Virtual Channels: Virtual Channel 1: Channel Gain Table: Disabled
-      Virtual Channels: Virtual Channel 1: Channel Offset Table: Disabled
+      Virtual Channels: Virtual Channel 1: Channel Offset Table: Offset Entry 0
       Virtual Channels: Virtual Channel 1: Add/Average Mode: Disabled
       Virtual Channels: Virtual Channel 1: Add/Average Count: 1-time conversion (Normal Conversion)
       Virtual Channels: Virtual Channel 1: Limit Clip Table Id: Disabled
-      Virtual Channels: Virtual Channel 1: Conversion Data Format Select: 12-bit Data Format
+      Virtual Channels: Virtual Channel 1: Conversion Data Format Select: 16-bit Data Format
       Virtual Channels: Virtual Channel 1: Digital Filter Selection: Disabled
       Virtual Channels: Virtual Channel 2: Scan Group: None
       Virtual Channels: Virtual Channel 2: Channel Select: AN000
@@ -956,4 +956,56 @@ FSP Configuration
       Scan Groups: Scan Group 8: FIFO Enable: Disable
       Scan Groups: Scan Group 8: FIFO Interrupt Enable: Disable
       Scan Groups: Scan Group 8: FIFO Interrupt Generation Level : 0
+      
+    Instance "g_timer_gpt0 Timer, General PWM (r_gpt)"
+      General: Name: g_timer_gpt0
+      General: Channel: 0
+      General: Mode: Periodic
+      General: Period: 5
+      General: Compare Match: Compare Match A: Status: Disabled
+      General: Compare Match: Compare Match A: Compare match value: 0
+      General: Compare Match: Compare Match B: Status: Disabled
+      General: Compare Match: Compare Match B: Compare match value: 0
+      General: Period Unit: Milliseconds
+      Output: Custom Waveform: GTIOA: Initial Output Level: Pin Level Low
+      Output: Custom Waveform: GTIOA: Cycle End Output Level: Pin Level Retain
+      Output: Custom Waveform: GTIOA: Compare Match Output Level: Pin Level Retain
+      Output: Custom Waveform: GTIOA: Retain Output Level at Count Stop: Disabled
+      Output: Custom Waveform: GTIOB: Initial Output Level: Pin Level Low
+      Output: Custom Waveform: GTIOB: Cycle End Output Level: Pin Level Retain
+      Output: Custom Waveform: GTIOB: Compare Match Output Level: Pin Level Retain
+      Output: Custom Waveform: GTIOB: Retain Output Level at Count Stop: Disabled
+      Output: Custom Waveform: Custom Waveform Enable: Disabled
+      Output: Duty Cycle Percent (only applicable in PWM mode): 50
+      Output: GTIOCA Output Enabled: False
+      Output: GTIOCA Stop Level: Pin Level Low
+      Output: GTIOCB Output Enabled: False
+      Output: GTIOCB Stop Level: Pin Level Low
+      Input: Count Up Source: 
+      Input: Count Down Source: 
+      Input: Start Source: 
+      Input: Stop Source: 
+      Input: Clear Source: 
+      Input: Capture A Source: 
+      Input: Capture B Source: 
+      Input: Noise Filter A Sampling Clock Select: No Filter
+      Input: Noise Filter B Sampling Clock Select: No Filter
+      Interrupts: Callback: gpt0_timing_callback
+      Interrupts: Overflow/Crest Interrupt Priority: Priority 14
+      Interrupts: Capture/Compare match A Interrupt Priority: Disabled
+      Interrupts: Capture/Compare match B Interrupt Priority: Disabled
+      Interrupts: Underflow/Trough Interrupt Priority: Disabled
+      Extra Features: Extra Features: Disabled
+      Extra Features: Output Disable: POEG Link: POEG Channel 0
+      Extra Features: Output Disable: Output Disable POEG Trigger: 
+      Extra Features: ADC Trigger: Start Event Trigger (Channels with GTINTAD only): 
+      Extra Features: ADC Trigger: ADC A Compare Match (Raw Counts): 0
+      Extra Features: ADC Trigger: ADC B Compare Match (Raw Counts): 0
+      Extra Features: Dead Time (Value range varies with Channel): Dead Time Count Up (Raw Counts): 0
+      Extra Features: Dead Time (Value range varies with Channel): Dead Time Count Down (Raw Counts) (Channels with GTDVD only): 0
+      Extra Features: Interrupt Skipping (Channels with GTITC only): Interrupt to Count: None
+      Extra Features: Interrupt Skipping (Channels with GTITC only): Interrupt Skip Count: 0
+      Extra Features: Interrupt Skipping (Channels with GTITC only): Skip ADC Events: None
+      Extra Features: Output Disable: GTIOCA Disable Setting: Disable Prohibited
+      Extra Features: Output Disable: GTIOCB Disable Setting: Disable Prohibited
       

@@ -1,9 +1,6 @@
 #include "bsp_gpt_pwm_output.h"
 
 
-/*  当前选用PWM输出引脚 GTIOC6B P600 */
-
-
 //仅用于计算占空比
 static uint32_t current_period_counts1;
 static uint32_t current_period_counts2;

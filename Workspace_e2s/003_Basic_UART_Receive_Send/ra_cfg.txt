@@ -86,7 +86,7 @@ FSP Configuration
     PLL2 Div /1
     PLL2 Mul x10.0
     Clock Src: PLL
-    CLKOUT Disabled
+    CLKOUT Src: XTAL
     SCISPICLK Src: PLL
     CANFDCLK Disabled
     GPTCLK Disabled
@@ -98,7 +98,7 @@ FSP Configuration
     PCLKC Div /4
     PCLKD Div /2
     FCLK Div /4
-    CLKOUT Div /1
+    CLKOUT Div /16
     SCISPICLK Div /2
     CANFDCLK Div /6
     GPTCLK Div /2
@@ -163,7 +163,7 @@ FSP Configuration
       PC15 9 - - - - Disabled - - "ACMPHS (CMPOUT3): CMPOUT3; ADC_B: ADTRG1; AGT1: AGTIO1; GPT: GTADSM1; GPT: GTCPPO1; GPT: GTCPPO7; GPT3: GTIOC3B; GPT_POEGB: GTETRGB; ICU15: IRQ15" - None - - 
       PD00 81 - - - - Disabled - - "CANFD0: CRX0; GPT: GTADSM0; GPT: GTCPPO4; KINT: KR00; SCI2: CTS2; SCI3: RXD3; SPI1: SSLB0" - None - - 
       PD01 82 GPIO - L - "Output mode (Initial High)" - - "CANFD0: CTX0; GPT: GTADSM1; GPT: GTCPPO7; KINT: KR01; SCI2: DE2; SCI2: SS_CTS_RTS2; SCI3: TXD3; SPI1: SSLB1" - IO - - 
-      PD02 83 - - - - Disabled - - "ACMPHS (CMPOUT3): CMPOUT3; AGT1: AGTEE1; CGC: CLKOUT; GPT: GTCPPO0; GPT: GTCPPO2; ICU9: IRQ9-DS; KINT: KR02; SCI3: DE3; SCI3: SCK3; SCI4: RXD4" - None - - 
+      PD02 83 CGC_CLKOUT - L None "Peripheral mode" - - "ACMPHS (CMPOUT3): CMPOUT3; AGT1: AGTEE1; CGC: CLKOUT; GPT: GTCPPO0; GPT: GTCPPO2; ICU9: IRQ9-DS; KINT: KR02; SCI3: DE3; SCI3: SCK3; SCI4: RXD4" - O - - 
       PD03 84 GPIO - L - "Output mode (Initial High)" - - "ACMPHS (CMPOUT0): CMPOUT0; GPT: GTCPPO0; KINT: KR03; SCI4: DE4; SCI4: SCK4; SCI9: CTS9; SPI1: SSLB2" - IO - - 
       PD04 85 GPIO - L - "Output mode (Initial Low)" - - "ACMPHS (CMPOUT1): CMPOUT1; GPT: GTCPPO1; KINT: KR04; SCI4: DE4; SCI4: SS_CTS_RTS4; SCI9: DE9; SCI9: SS_CTS_RTS9; SPI1: SSLB3" - IO - - 
       PD05 86 SCI9_TXD9 - L - "Peripheral mode" - - "GPT: GTADSM0; GPT: GTCPPO3; IIC1: SDA1; KINT: KR05; SCI9: TXD9; SPI0: SSLA3" - O - - 

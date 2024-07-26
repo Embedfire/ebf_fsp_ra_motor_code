@@ -16,6 +16,7 @@
         </peripheral>
         <peripheral name="PORTD" group="PORT">
             <slot name="PD01" secure="true"/>
+            <slot name="PD02" secure="true"/>
             <slot name="PD03" secure="true"/>
             <slot name="PD04" secure="true"/>
             <slot name="PD05" secure="true"/>

@@ -133,7 +133,7 @@
     <node id="board.clock.pclkc.div" option="board.clock.pclkc.div.4"/>
     <node id="board.clock.pclkd.div" option="board.clock.pclkd.div.2"/>
     <node id="board.clock.fclk.div" option="board.clock.fclk.div.4"/>
-    <node id="board.clock.clkout.div" option="board.clock.clkout.div.1"/>
+    <node id="board.clock.clkout.div" option="board.clock.clkout.div.16"/>
     <node id="board.clock.scispiclk.div" option="board.clock.scispiclk.div.2"/>
     <node id="board.clock.canfdclk.div" option="board.clock.canfdclk.div.6"/>
     <node id="board.clock.gptclk.div" option="board.clock.gptclk.div.2"/>
@@ -371,7 +371,7 @@
       <property id="module.driver.adc.fifo_read_ipl_group_3" value="board.icu.common.irq.priority12"/>
       <property id="module.driver.adc.fifo_read_ipl_group_4" value="board.icu.common.irq.priority12"/>
       <property id="module.driver.adc.fifo_read_ipl_group_5678" value="board.icu.common.irq.priority12"/>
-      <property id="module.driver.adc.digital_filter_adc0_selection_1" value="Sinc Filter (Oversampling Rate = 8)"/>
+      <property id="module.driver.adc.digital_filter_adc0_selection_1" value="module.driver.adc.digital_filter_adc0_selection_1.minimum_phase_filter"/>
       <property id="module.driver.adc.digital_filter_adc1_selection_1" value="Sinc Filter (Oversampling Rate = 8)"/>
       <property id="module.driver.adc.digital_filter_adc0_selection_2" value="Sinc Filter (Oversampling Rate = 8)"/>
       <property id="module.driver.adc.digital_filter_adc1_selection_2" value="Sinc Filter (Oversampling Rate = 8)"/>
@@ -412,7 +412,7 @@
       <property id="module.driver.adc.pga_unit_1_single_ended_mode_gain" value="module.driver.adc.pga_unit_1_single_ended_mode_gain.2.500"/>
       <property id="module.driver.adc.pga_unit_2_single_ended_mode_gain" value="module.driver.adc.pga_unit_2_single_ended_mode_gain.2.500"/>
       <property id="module.driver.adc.pga_unit_3_single_ended_mode_gain" value="module.driver.adc.pga_unit_3_single_ended_mode_gain.2.500"/>
-      <property id="module.driver.adc.user_offset_id_0" value="0"/>
+      <property id="module.driver.adc.user_offset_id_0" value="-24625"/>
       <property id="module.driver.adc.user_offset_id_1" value="0"/>
       <property id="module.driver.adc.user_offset_id_2" value="0"/>
       <property id="module.driver.adc.user_offset_id_3" value="0"/>
@@ -420,7 +420,7 @@
       <property id="module.driver.adc.user_offset_id_5" value="0"/>
       <property id="module.driver.adc.user_offset_id_6" value="0"/>
       <property id="module.driver.adc.user_offset_id_7" value="0"/>
-      <property id="module.driver.adc.user_gain_0" value="0"/>
+      <property id="module.driver.adc.user_gain_0" value="0.0298"/>
       <property id="module.driver.adc.user_gain_1" value="0"/>
       <property id="module.driver.adc.user_gain_2" value="0"/>
       <property id="module.driver.adc.user_gain_3" value="0"/>
@@ -428,9 +428,9 @@
       <property id="module.driver.adc.user_gain_5" value="0"/>
       <property id="module.driver.adc.user_gain_6" value="0"/>
       <property id="module.driver.adc.user_gain_7" value="0"/>
-      <property id="module.driver.adc.limiter_clip_interrupt_enable_mask" value=""/>
-      <property id="module.driver.adc.limiter_clip_lower_0" value="0"/>
-      <property id="module.driver.adc.limiter_clip_upper_0" value="0"/>
+      <property id="module.driver.adc.limiter_clip_interrupt_enable_mask" value="module.driver.adc.limiter_clip_interrupt_enable_mask.table_0"/>
+      <property id="module.driver.adc.limiter_clip_lower_0" value="17712"/>
+      <property id="module.driver.adc.limiter_clip_upper_0" value="24797"/>
       <property id="module.driver.adc.limiter_clip_lower_1" value="0"/>
       <property id="module.driver.adc.limiter_clip_upper_1" value="0"/>
       <property id="module.driver.adc.limiter_clip_lower_2" value="0"/>
@@ -449,21 +449,21 @@
       <property id="module.driver.adc.virtual_channel_0_channel_select" value="module.driver.adc.virtual_channel_0_channel_select.an001"/>
       <property id="module.driver.adc.virtual_channel_0_sampling_table_id" value="module.driver.adc.virtual_channel_0_sampling_table_id.sampling_state_entry_0"/>
       <property id="module.driver.adc.virtual_channel_0_gain_table" value="module.driver.adc.virtual_channel_0_gain_table.disabled"/>
-      <property id="module.driver.adc.virtual_channel_0_offset_table" value="module.driver.adc.virtual_channel_0_offset_table.disabled"/>
-      <property id="module.driver.adc.virtual_channel_0_add_average_mode" value="module.driver.adc.virtual_channel_0_add_average_mode.disabled"/>
-      <property id="module.driver.adc.virtual_channel_0_add_average_count" value="module.driver.adc.virtual_channel_0_add_average_count.1_time_conversion"/>
+      <property id="module.driver.adc.virtual_channel_0_offset_table" value="module.driver.adc.virtual_channel_0_offset_table.offset_entry_0"/>
+      <property id="module.driver.adc.virtual_channel_0_add_average_mode" value="module.driver.adc.virtual_channel_0_add_average_mode.averaging_mode"/>
+      <property id="module.driver.adc.virtual_channel_0_add_average_count" value="module.driver.adc.virtual_channel_0_add_average_count.1024_time_conversion"/>
       <property id="module.driver.adc.virtual_channel_0_limit_clip_table_id" value="module.driver.adc.virtual_channel_0_limit_clip_table_id.disabled"/>
-      <property id="module.driver.adc.virtual_channel_0_data_format" value="module.driver.adc.virtual_channel_0_data_format.12_bit_data_format"/>
+      <property id="module.driver.adc.virtual_channel_0_data_format" value="module.driver.adc.virtual_channel_0_data_format.16_bit_data_format"/>
       <property id="module.driver.adc.virtual_channel_0_digital_filter_id" value="module.driver.adc.virtual_channel_0_digital_filter_id.disabled"/>
-      <property id="module.driver.adc.virtual_channel_1_scan_group" value="module.driver.adc.virtual_channel_1_scan_group.none"/>
+      <property id="module.driver.adc.virtual_channel_1_scan_group" value="module.driver.adc.virtual_channel_1_scan_group.scan_group_0"/>
       <property id="module.driver.adc.virtual_channel_1_channel_select" value="module.driver.adc.virtual_channel_1_channel_select.an003"/>
       <property id="module.driver.adc.virtual_channel_1_sampling_table_id" value="module.driver.adc.virtual_channel_1_sampling_table_id.sampling_state_entry_0"/>
       <property id="module.driver.adc.virtual_channel_1_gain_table" value="module.driver.adc.virtual_channel_1_gain_table.disabled"/>
-      <property id="module.driver.adc.virtual_channel_1_offset_table" value="module.driver.adc.virtual_channel_1_offset_table.disabled"/>
+      <property id="module.driver.adc.virtual_channel_1_offset_table" value="module.driver.adc.virtual_channel_1_offset_table.offset_entry_0"/>
       <property id="module.driver.adc.virtual_channel_1_add_average_mode" value="module.driver.adc.virtual_channel_1_add_average_mode.disabled"/>
       <property id="module.driver.adc.virtual_channel_1_add_average_count" value="module.driver.adc.virtual_channel_1_add_average_count.1_time_conversion"/>
       <property id="module.driver.adc.virtual_channel_1_limit_clip_table_id" value="module.driver.adc.virtual_channel_1_limit_clip_table_id.disabled"/>
-      <property id="module.driver.adc.virtual_channel_1_data_format" value="module.driver.adc.virtual_channel_1_data_format.12_bit_data_format"/>
+      <property id="module.driver.adc.virtual_channel_1_data_format" value="module.driver.adc.virtual_channel_1_data_format.16_bit_data_format"/>
       <property id="module.driver.adc.virtual_channel_1_digital_filter_id" value="module.driver.adc.virtual_channel_1_digital_filter_id.disabled"/>
       <property id="module.driver.adc.virtual_channel_2_scan_group" value="module.driver.adc.virtual_channel_2_scan_group.none"/>
       <property id="module.driver.adc.virtual_channel_2_channel_select" value="module.driver.adc.virtual_channel_2_channel_select.an000"/>
@@ -924,12 +924,65 @@
       <property id="module.driver.adc.scan_group_8_fifo_isr_enable" value="module.driver.adc.scan_group_8_fifo_isr_enable.disable"/>
       <property id="module.driver.adc.scan_group_8_fifo_isr_generation_level" value="0"/>
     </module>
+    <module id="module.driver.timer_on_gpt.2027281974">
+      <property id="module.driver.timer.name" value="g_timer_gpt0"/>
+      <property id="module.driver.timer.channel" value="0"/>
+      <property id="module.driver.timer.mode" value="module.driver.timer.mode.mode_periodic"/>
+      <property id="module.driver.timer.period" value="5"/>
+      <property id="module.driver.timer.compare_match.a.status" value="module.driver.timer.compare_match.a.status.disabled"/>
+      <property id="module.driver.timer.compare_match.a.value" value="0"/>
+      <property id="module.driver.timer.compare_match.b.status" value="module.driver.timer.compare_match.b.status.disabled"/>
+      <property id="module.driver.timer.compare_match.b.value" value="0"/>
+      <property id="module.driver.timer.unit" value="module.driver.timer.unit.unit_period_msec"/>
+      <property id="module.driver.timer.gtior.gtioa.initial_output_level" value="module.driver.timer.gtior.gtioa.initial_output_level.low"/>
+      <property id="module.driver.timer.gtior.gtioa.cycle_end_output_level" value="module.driver.timer.gtior.gtioa.cycle_end_output_level.retain"/>
+      <property id="module.driver.timer.gtior.gtioa.compare_match_output_level" value="module.driver.timer.gtior.gtioa.compare_match_output_level.retain"/>
+      <property id="module.driver.timer.gtior.gtioa.count_stop_retain" value="module.driver.timer.gtior.gtioa.count_stop_retain.disabled"/>
+      <property id="module.driver.timer.gtior.gtiob.initial_output_level" value="module.driver.timer.gtior.gtiob.initial_output_level.low"/>
+      <property id="module.driver.timer.gtior.gtiob.cycle_end_output_level" value="module.driver.timer.gtior.gtiob.cycle_end_output_level.retain"/>
+      <property id="module.driver.timer.gtior.gtiob.compare_match_output_level" value="module.driver.timer.gtior.gtiob.compare_match_output_level.retain"/>
+      <property id="module.driver.timer.gtior.gtiob.count_stop_retain" value="module.driver.timer.gtior.gtiob.count_stop_retain.disabled"/>
+      <property id="module.driver.timer.gtior.custom_waveform_enable" value="module.driver.timer.gtior.custom_waveform_enable.disabled"/>
+      <property id="module.driver.timer.duty_cycle" value="50"/>
+      <property id="module.driver.timer.gtioca_output_enabled" value="module.driver.timer.gtioca_output_enabled.false"/>
+      <property id="module.driver.timer.gtioca_stop_level" value="module.driver.timer.gtioca_stop_level.pin_level_low"/>
+      <property id="module.driver.timer.gtiocb_output_enabled" value="module.driver.timer.gtiocb_output_enabled.false"/>
+      <property id="module.driver.timer.gtiocb_stop_level" value="module.driver.timer.gtiocb_stop_level.pin_level_low"/>
+      <property id="module.driver.timer.count_up_source" value=""/>
+      <property id="module.driver.timer.count_down_source" value=""/>
+      <property id="module.driver.timer.start_source" value=""/>
+      <property id="module.driver.timer.stop_source" value=""/>
+      <property id="module.driver.timer.clear_source" value=""/>
+      <property id="module.driver.timer.capture_a_source" value=""/>
+      <property id="module.driver.timer.capture_b_source" value=""/>
+      <property id="module.driver.timer.gtioca_filter" value="module.driver.timer.gtioc_filter.gtioc_filter_none"/>
+      <property id="module.driver.timer.gtiocb_filter" value="module.driver.timer.gtioc_filter.gtioc_filter_none"/>
+      <property id="module.driver.timer.p_callback" value="gpt0_timing_callback"/>
+      <property id="module.driver.timer.ipl" value="board.icu.common.irq.priority14"/>
+      <property id="module.driver.timer.capture_a_ipl" value="_disabled"/>
+      <property id="module.driver.timer.capture_b_ipl" value="_disabled"/>
+      <property id="module.driver.timer.trough_ipl" value="_disabled"/>
+      <property id="module.driver.timer.extra" value="module.driver.timer.extra.disabled"/>
+      <property id="module.driver.timer.poeg_link" value="module.driver.timer.poeg_link.poeg_link_poeg0"/>
+      <property id="module.driver.timer.output_disable" value=""/>
+      <property id="module.driver.timer.adc_trigger" value=""/>
+      <property id="module.driver.timer.adc_a_compare_match" value="0"/>
+      <property id="module.driver.timer.adc_b_compare_match" value="0"/>
+      <property id="module.driver.timer.dead_time_count_up" value="0"/>
+      <property id="module.driver.timer.dead_time_count_down" value="0"/>
+      <property id="module.driver.timer.interrupt_skip.source" value="module.driver.timer.interrupt_skip.source.none"/>
+      <property id="module.driver.timer.interrupt_skip.count" value="module.driver.timer.interrupt_skip.count.count_0"/>
+      <property id="module.driver.timer.interrupt_skip.adc" value="module.driver.timer.interrupt_skip.skip_sources.interrupt_skip.adc.none"/>
+      <property id="module.driver.timer.gtioca_disable_setting" value="module.driver.timer.gtioca_disable_setting.gtioc_disable_prohibited"/>
+      <property id="module.driver.timer.gtiocb_disable_setting" value="module.driver.timer.gtiocb_disable_setting.gtioc_disable_prohibited"/>
+    </module>
     <context id="_hal.0">
       <stack module="module.driver.ioport_on_ioport.0"/>
       <stack module="module.driver.uart_on_sci_b_uart.1841074838"/>
       <stack module="module.driver.timer_on_gpt.2037639902"/>
       <stack module="module.driver.timer_on_gpt.146567366"/>
       <stack module="module.driver.adc_on_adc_b.436280760"/>
+      <stack module="module.driver.timer_on_gpt.2027281974"/>
     </context>
     <config id="config.driver.sci_b_uart">
       <property id="config.driver.sci_b_uart.param_checking_enable" value="config.driver.sci_b_uart.param_checking_enable.bsp"/>

@@ -121,7 +121,7 @@
     <node id="board.clock.pll2.mul" option="board.clock.pll2.mul.100"/>
     <node id="board.clock.pll2.display" option="board.clock.pll2.display.value"/>
     <node id="board.clock.clock.source" option="board.clock.clock.source.pll"/>
-    <node id="board.clock.clkout.source" option="board.clock.clkout.source.disabled"/>
+    <node id="board.clock.clkout.source" option="board.clock.clkout.source.xtal"/>
     <node id="board.clock.scispiclk.source" option="board.clock.scispiclk.source.pll"/>
     <node id="board.clock.canfdclk.source" option="board.clock.canfdclk.source.disabled"/>
     <node id="board.clock.gptclk.source" option="board.clock.gptclk.source.disabled"/>
@@ -133,7 +133,7 @@
     <node id="board.clock.pclkc.div" option="board.clock.pclkc.div.4"/>
     <node id="board.clock.pclkd.div" option="board.clock.pclkd.div.2"/>
     <node id="board.clock.fclk.div" option="board.clock.fclk.div.4"/>
-    <node id="board.clock.clkout.div" option="board.clock.clkout.div.1"/>
+    <node id="board.clock.clkout.div" option="board.clock.clkout.div.16"/>
     <node id="board.clock.scispiclk.div" option="board.clock.scispiclk.div.2"/>
     <node id="board.clock.canfdclk.div" option="board.clock.canfdclk.div.6"/>
     <node id="board.clock.gptclk.div" option="board.clock.gptclk.div.2"/>
@@ -265,6 +265,8 @@
   </raModuleConfiguration>
   <raPinConfiguration>
     <pincfg active="true" name="R7FA6T2BD3CFP.pincfg" selected="true" symbol="g_bsp_pin_cfg">
+      <configSetting altId="cgc.clkout.pd02" configurationId="cgc.clkout"/>
+      <configSetting altId="cgc.mode.custom.free" configurationId="cgc.mode"/>
       <configSetting altId="icu13.irq13_dash_ds.pc02" configurationId="icu13.irq13_dash_ds"/>
       <configSetting altId="icu13.mode.enabled.free" configurationId="icu13.mode"/>
       <configSetting altId="icu4.irq4.pb14" configurationId="icu4.irq4"/>
@@ -290,6 +292,8 @@
       <configSetting altId="pc02.gpio_mode.gpio_mode_irq" configurationId="pc02.gpio_mode"/>
       <configSetting altId="pd01.output.high" configurationId="pd01"/>
       <configSetting altId="pd01.gpio_mode.gpio_mode_out.high" configurationId="pd01.gpio_mode"/>
+      <configSetting altId="pd02.cgc.clkout" configurationId="pd02"/>
+      <configSetting altId="pd02.gpio_mode.gpio_mode_peripheral" configurationId="pd02.gpio_mode"/>
       <configSetting altId="pd03.output.high" configurationId="pd03"/>
       <configSetting altId="pd03.gpio_mode.gpio_mode_out.high" configurationId="pd03.gpio_mode"/>
       <configSetting altId="pd04.output.low" configurationId="pd04"/>

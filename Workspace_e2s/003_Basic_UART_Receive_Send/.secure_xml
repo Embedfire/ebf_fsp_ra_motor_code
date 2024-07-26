@@ -28,7 +28,7 @@
     <node id="board.clock.pll2.mul" option="board.clock.pll2.mul.100"/>
     <node id="board.clock.pll2.display" option="board.clock.pll2.display.value"/>
     <node id="board.clock.clock.source" option="board.clock.clock.source.pll"/>
-    <node id="board.clock.clkout.source" option="board.clock.clkout.source.disabled"/>
+    <node id="board.clock.clkout.source" option="board.clock.clkout.source.xtal"/>
     <node id="board.clock.scispiclk.source" option="board.clock.scispiclk.source.pll"/>
     <node id="board.clock.canfdclk.source" option="board.clock.canfdclk.source.disabled"/>
     <node id="board.clock.gptclk.source" option="board.clock.gptclk.source.disabled"/>
@@ -40,7 +40,7 @@
     <node id="board.clock.pclkc.div" option="board.clock.pclkc.div.4"/>
     <node id="board.clock.pclkd.div" option="board.clock.pclkd.div.2"/>
     <node id="board.clock.fclk.div" option="board.clock.fclk.div.4"/>
-    <node id="board.clock.clkout.div" option="board.clock.clkout.div.1"/>
+    <node id="board.clock.clkout.div" option="board.clock.clkout.div.16"/>
     <node id="board.clock.scispiclk.div" option="board.clock.scispiclk.div.2"/>
     <node id="board.clock.canfdclk.div" option="board.clock.canfdclk.div.6"/>
     <node id="board.clock.gptclk.div" option="board.clock.gptclk.div.2"/>
@@ -60,6 +60,7 @@
   </raClockConfiguration>
   <raPinConfiguration>
     <pincfg active="true" name="" symbol="">
+      <configSetting altId="cgc.clkout.pd02" configurationId="cgc.clkout"/>
       <configSetting altId="icu13.irq13_dash_ds.pc02" configurationId="icu13.irq13_dash_ds" isUsedByDriver="true"/>
       <configSetting altId="icu4.irq4.pb14" configurationId="icu4.irq4" isUsedByDriver="true"/>
       <configSetting altId="jtag_fslash_swd.tck.pa14" configurationId="jtag_fslash_swd.tck"/>

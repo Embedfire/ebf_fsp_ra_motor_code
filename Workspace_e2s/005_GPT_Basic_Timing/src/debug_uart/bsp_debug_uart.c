@@ -24,7 +24,7 @@ void debug_uart9_callback (uart_callback_args_t * p_args)
         case UART_EVENT_RX_CHAR:
         {
             /* 把串口接收到的数据发送回去 */
-            R_SCI_B_UART_Write(&debug_uart9_ctrl, (uint8_t *)&(p_args->data), 1);
+            //R_SCI_B_UART_Write(&debug_uart9_ctrl, (uint8_t *)&(p_args->data), 1);
             break;
         }
         case UART_EVENT_TX_COMPLETE:
