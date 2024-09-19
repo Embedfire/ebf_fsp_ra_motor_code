@@ -99,7 +99,7 @@ FSP Configuration
     PCLKD Div /2
     FCLK Div /4
     CLKOUT Div /16
-    SCISPICLK Div /2
+    SCISPICLK Div /8
     CANFDCLK Div /6
     GPTCLK Div /2
     IICCLK Div /1

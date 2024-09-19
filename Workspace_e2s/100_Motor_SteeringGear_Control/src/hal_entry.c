@@ -1,9 +1,9 @@
+#include <motor_controls/steering_gear.h>
 #include "hal_data.h"
 #include "led/bsp_led.h"
 #include "beep/bsp_beep.h"
 #include "key/bsp_key_irq.h"
 #include "debug_uart/bsp_debug_uart.h"
-#include "motor/steering_gear.h"
 FSP_CPP_HEADER
 void R_BSP_WarmStart(bsp_warm_start_event_t event);
 FSP_CPP_FOOTER

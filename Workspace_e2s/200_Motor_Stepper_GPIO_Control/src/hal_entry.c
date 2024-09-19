@@ -7,7 +7,7 @@ FSP_CPP_FOOTER
 #include "led/bsp_led.h"
 #include "debug_uart/bsp_debug_uart.h"
 #include "key/key.h"
-#include "motor_stepper/motor_stepper.h"
+#include <motor_controls/motor_stepper.h>
 
 extern char Order_Buff[1];
 

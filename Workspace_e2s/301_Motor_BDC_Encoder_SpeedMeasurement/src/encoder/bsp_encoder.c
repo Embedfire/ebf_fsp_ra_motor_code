@@ -3,9 +3,7 @@
 #include "motor_control/bsp_motor_control.h"
 #include "debug_uart/bsp_debug_uart.h"
 
-//uint32_t x = 1;
 _Bool flag = true;
-//float speed1 = 0.0;
 
 timer_info_t info;  //用于获取定时器参数信息
 uint32_t period;    //输入捕获计数器的计数周期
@@ -25,7 +23,6 @@ void initEncoder(void)
 
     /* 使能输入捕获 */
     R_GPT_Enable(&encoder_ctrl);
-
 
 }
 
@@ -48,6 +45,7 @@ void encoder_callback(timer_callback_args_t *p_args)
     {
         /* 捕获事件 正转计数 */
         case TIMER_EVENT_CAPTURE_A:
+            flag = true;
             if (capture_flag == 0)
             {
                 // 第一次捕获事件，记录捕获值并重置溢出计数
@@ -71,7 +69,27 @@ void encoder_callback(timer_callback_args_t *p_args)
 
         /* 捕获事件 反转计数 */
         case TIMER_EVENT_CAPTURE_B:
-            // 根据需要处理反转计数事件，目前为空
+            flag = false;
+            if (capture_flag == 0)
+            {
+                // 第一次捕获事件，记录捕获值并重置溢出计数
+                capture_first = p_args->capture;
+                overflow_count = 0;
+                capture_flag = 1;
+            }
+            else if (capture_flag == 1)
+            {
+                // 第二次捕获事件，计算捕获周期并计算频率
+                capture_second = p_args->capture + overflow_count * TIMER_MAX_COUNT;
+                pulse_period = capture_second - capture_first;
+                phase_a_frequency = info.clock_frequency / (pulse_period*1);
+
+                // 重置捕获标志和溢出计数，并设置捕获完成标志
+                overflow_count = 0;
+                capture_flag = 0;
+                capture_ready = true;
+            }
+            break;
             break;
 
         /* 计数溢出事件 */
@@ -85,21 +103,4 @@ void encoder_callback(timer_callback_args_t *p_args)
     }
 }
 
-
-
-
-/*还是需要定时，暂时注释掉*/
-// /* 定时器0中断回调函数 */
-//void time0_callback(timer_callback_args_t * p_args)
-//{
-//	R_GPT_Stop(&encoder_ctrl);
-//    /* 定时周期结束事件 */
-//    if (TIMER_EVENT_CYCLE_END == p_args->event)
-//    {
-//		x = encoder_ctrl.p_reg->GTCNT;
-//		dc_motor_s.now_speed = (float)((x * 20 * 60 / 4.0 / 960.0) * flag);
-//		R_GPT_CounterSet(&encoder_ctrl, 0);
-//    }
-//	R_GPT_Start(&encoder_ctrl);
-//}
 

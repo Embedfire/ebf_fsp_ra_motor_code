@@ -192,10 +192,6 @@
       <description>Event Link Controller</description>
       <originalPack>Renesas.RA.5.4.0.pack</originalPack>
     </component>
-    <component apiversion="" class="HAL Drivers" condition="" group="all" subgroup="r_icu" variant="" vendor="Renesas" version="5.4.0">
-      <description>External Interrupt</description>
-      <originalPack>Renesas.RA.5.4.0.pack</originalPack>
-    </component>
   </raComponentSelection>
   <raElcConfiguration>
     <eventProduced event="event.elc.software.event.0"/>
@@ -318,7 +314,7 @@
       <property id="module.driver.timer.stop_source" value=""/>
       <property id="module.driver.timer.clear_source" value="_signal.event.elc.software.event.0"/>
       <property id="module.driver.timer.capture_a_source" value="module.driver.gpt.source_gtioca_rising_gtiocb_low"/>
-      <property id="module.driver.timer.capture_b_source" value=""/>
+      <property id="module.driver.timer.capture_b_source" value="module.driver.gpt.source_gtioca_rising_gtiocb_high"/>
       <property id="module.driver.timer.gtioca_filter" value="module.driver.timer.gtioc_filter.gtioc_filter_none"/>
       <property id="module.driver.timer.gtiocb_filter" value="module.driver.timer.gtioc_filter.gtioc_filter_none"/>
       <property id="module.driver.timer.p_callback" value="encoder_callback"/>
@@ -395,15 +391,6 @@
     <module id="module.driver.elc_on_elc.1154730849">
       <property id="module.driver.elc.name" value="g_elc"/>
     </module>
-    <module id="module.driver.external_irq_on_icu.900997624">
-      <property id="module.driver.external_irq.name" value="sw2_irq"/>
-      <property id="module.driver.external_irq.channel" value="4"/>
-      <property id="module.driver.external_irq.trigger" value="module.driver.external_irq.trigger.trig_rising"/>
-      <property id="module.driver.external_irq.filter_enable" value="module.driver.external_irq.filter_enable.false"/>
-      <property id="module.driver.external_irq.clock_source_div" value="module.driver.external_irq.clock_source_div.clock_source_div_by_64"/>
-      <property id="module.driver.external_irq.p_callback" value="sw2_irq_callback"/>
-      <property id="module.driver.external_irq.ipl" value="board.icu.common.irq.priority12"/>
-    </module>
     <context id="_hal.0">
       <stack module="module.driver.ioport_on_ioport.0"/>
       <stack module="module.driver.uart_on_sci_b_uart.1841074838"/>
@@ -411,7 +398,6 @@
       <stack module="module.driver.timer_on_gpt.146567366"/>
       <stack module="module.driver.timer_on_gpt.1420840411"/>
       <stack module="module.driver.elc_on_elc.1154730849"/>
-      <stack module="module.driver.external_irq_on_icu.900997624"/>
     </context>
     <config id="config.driver.sci_b_uart">
       <property id="config.driver.sci_b_uart.param_checking_enable" value="config.driver.sci_b_uart.param_checking_enable.bsp"/>
@@ -429,9 +415,6 @@
     </config>
     <config id="config.driver.ioport">
       <property id="config.driver.ioport.checking" value="config.driver.ioport.checking.system"/>
-    </config>
-    <config id="config.driver.icu">
-      <property id="config.driver.icu.param_checking_enable" value="config.driver.icu.param_checking_enable.bsp"/>
     </config>
   </raModuleConfiguration>
   <raPinConfiguration>

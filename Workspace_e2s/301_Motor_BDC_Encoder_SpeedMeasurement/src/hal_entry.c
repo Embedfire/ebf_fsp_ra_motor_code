@@ -43,10 +43,8 @@ void hal_entry(void)
 
 
         /* TODO: add your own code here */
-        //R_ELC_LinkSet(&g_elc_ctrl, ELC_PERIPHERAL_ADC0, ELC_EVENT_GPT4_COUNTER_OVERFLOW);
         LED_Init();         // LED 初始化
         Debug_UART9_Init(); // SCI4 UART 调试串口初始化
-        IRQ_Init();
 
         /* 初始化软件并设置控制结构中定义的链接。 */
         R_ELC_Open(&g_elc_ctrl, &g_elc_cfg);
@@ -78,11 +76,16 @@ void hal_entry(void)
                R_BSP_SoftwareDelay(200, BSP_DELAY_UNITS_MILLISECONDS);
 
                if(encoder_printf == true)
-               /*打印电机方向、A相频率、电机外速度*/
-               flag == true ? printf("当前电机正转：频率 = %ldHz,速度 = %.2f圈/秒\n",phase_a_frequency,(float)phase_a_frequency/ENCODER_RESOLUTION/REDUCTION_RATIO) : printf("当前电机反转：频率 = %ldHz,速度 = %.2f圈/秒\n",phase_a_frequency,(float)phase_a_frequency/ENCODER_RESOLUTION/REDUCTION_RATIO) ;
+               {
+               /*打印电机方向、A相频率、电机转轴处速度、电机输出轴处速度*/
+                   if(flag == true)
+                       printf("当前电机正转：频率 = %ldHz,转轴速度 = %.2f转/秒,输出速度 = %.2f转/秒\n",phase_a_frequency,SHAFT_SPEED(phase_a_frequency),OUTPUT_SPEED(phase_a_frequency));
+                   else
+                       printf("当前电机反转：频率 = %ldHz,转轴速度 = %.2f转/秒,输出速度 = %.2f转/秒\n",phase_a_frequency,SHAFT_SPEED(phase_a_frequency),OUTPUT_SPEED(phase_a_frequency));
 
                /*频率、速度清零*/
                pulse_period = phase_a_frequency = 0;
+               }
          }
 
 
@@ -160,27 +163,17 @@ if(motor_reverse_flag == true) // 如果电机反转标志为真
     Motor_Control_Reverse();    // 反转电机
 
     if (motor_dir == 0) {
-        printf("电机方向翻转，当前旋转方向：逆时针\n");
+        printf("电机方向翻转，当前旋转方向：反转\n");
         //flag == true ? printf("正转\n") : printf("反转\n") ;
 
     }
     else {
-        printf("电机方向翻转，当前旋转方向：顺时针\n");
+        printf("电机方向翻转，当前旋转方向：正转\n");
         //flag == true ? printf("正转\n") : printf("反转\n") ;
     }
 }
 }
 
-
-//按键2中断回调函数
-void sw2_irq_callback(external_irq_callback_args_t *p_args)
-{
-     //防止回调函数中没有使用形参的警告产生
-     FSP_PARAMETER_NOT_USED(p_args);
-
-     Motor_Control_Reverse();
-
-}
 
 
 

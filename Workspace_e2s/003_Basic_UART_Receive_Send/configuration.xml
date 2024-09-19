@@ -134,7 +134,7 @@
     <node id="board.clock.pclkd.div" option="board.clock.pclkd.div.2"/>
     <node id="board.clock.fclk.div" option="board.clock.fclk.div.4"/>
     <node id="board.clock.clkout.div" option="board.clock.clkout.div.16"/>
-    <node id="board.clock.scispiclk.div" option="board.clock.scispiclk.div.2"/>
+    <node id="board.clock.scispiclk.div" option="board.clock.scispiclk.div.8"/>
     <node id="board.clock.canfdclk.div" option="board.clock.canfdclk.div.6"/>
     <node id="board.clock.gptclk.div" option="board.clock.gptclk.div.2"/>
     <node id="board.clock.iicclk.div" option="board.clock.iicclk.div.1"/>

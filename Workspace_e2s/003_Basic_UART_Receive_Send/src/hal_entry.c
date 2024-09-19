@@ -22,12 +22,6 @@ void hal_entry(void)
 
        while(1)
        {
-          LED1_ON; // LED1亮
-          LED4_ON; // LED2亮
-          R_BSP_SoftwareDelay(1, BSP_DELAY_UNITS_SECONDS); //延时1秒
-          LED1_OFF; // LED1灭
-          LED4_OFF; // LED2灭
-          R_BSP_SoftwareDelay(1, BSP_DELAY_UNITS_SECONDS); //延时1秒
        }
 
 

@@ -228,9 +228,6 @@ FSP Configuration
   Module "Event Link Controller (r_elc)"
     Parameter Checking: Default (BSP)
     
-  Module "External IRQ (r_icu)"
-    Parameter Checking: Default (BSP)
-    
   HAL
     Instance "g_ioport I/O Port (r_ioport)"
       Name: g_ioport
@@ -348,7 +345,7 @@ FSP Configuration
       Input: Stop Source: 
       Input: Clear Source: ELC SOFTWARE EVENT 0 (Software event 0)
       Input: Capture A Source: GTIOCA Rising Edge While GTIOCB Low
-      Input: Capture B Source: 
+      Input: Capture B Source: GTIOCA Rising Edge While GTIOCB High
       Input: Noise Filter A Sampling Clock Select: No Filter
       Input: Noise Filter B Sampling Clock Select: No Filter
       Interrupts: Callback: encoder_callback
@@ -424,13 +421,4 @@ FSP Configuration
       
     Instance "g_elc Event Link Controller (r_elc)"
       Name: g_elc
-      
-    Instance "sw2_irq External IRQ (r_icu)"
-      Name: sw2_irq
-      Channel: 4
-      Trigger: Rising
-      Digital Filtering: Disabled
-      Digital Filtering Sample Clock (Only valid when Digital Filtering is Enabled): PCLK / 64
-      Callback: sw2_irq_callback
-      Pin Interrupt Priority: Priority 12
       
