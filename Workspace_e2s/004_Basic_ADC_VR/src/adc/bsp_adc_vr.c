@@ -40,7 +40,7 @@ double Read_ADC_Voltage_Value(void)
           ;
        }
 
-       R_ADC_B_Read(&g_adc0_ctrl,ADC_CHANNEL_1, &adc_data);
+       R_ADC_B_Read(&g_adc0_ctrl,ADC_CHANNEL_15, &adc_data);
        c0 = (double)(adc_data*3.3/4095);
        return c0;
 }

@@ -360,7 +360,7 @@
       <property id="module.driver.adc.limiter_clip_lower_7" value="0"/>
       <property id="module.driver.adc.limiter_clip_upper_7" value="0"/>
       <property id="module.driver.adc.virtual_channel_0_scan_group" value="module.driver.adc.virtual_channel_0_scan_group.scan_group_0"/>
-      <property id="module.driver.adc.virtual_channel_0_channel_select" value="module.driver.adc.virtual_channel_0_channel_select.an001"/>
+      <property id="module.driver.adc.virtual_channel_0_channel_select" value="module.driver.adc.virtual_channel_0_channel_select.an015"/>
       <property id="module.driver.adc.virtual_channel_0_sampling_table_id" value="module.driver.adc.virtual_channel_0_sampling_table_id.sampling_state_entry_0"/>
       <property id="module.driver.adc.virtual_channel_0_gain_table" value="module.driver.adc.virtual_channel_0_gain_table.disabled"/>
       <property id="module.driver.adc.virtual_channel_0_offset_table" value="module.driver.adc.virtual_channel_0_offset_table.disabled"/>

@@ -391,7 +391,7 @@ FSP Configuration
       Limiter Clipping: Table Entry 7: Lower Limit Value: 0
       Limiter Clipping: Table Entry 7: Upper Limit Value: 0
       Virtual Channels: Virtual Channel 0: Scan Group: Scan Group 0
-      Virtual Channels: Virtual Channel 0: Channel Select: AN001
+      Virtual Channels: Virtual Channel 0: Channel Select: AN015
       Virtual Channels: Virtual Channel 0: Sampling State Table ID: Sampling State Entry 0
       Virtual Channels: Virtual Channel 0: Channel Gain Table: Disabled
       Virtual Channels: Virtual Channel 0: Channel Offset Table: Disabled
