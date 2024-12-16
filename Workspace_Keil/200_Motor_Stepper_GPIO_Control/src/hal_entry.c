@@ -60,7 +60,7 @@ void hal_entry(void)
 			case 'A':
 				STEP_CCW;
 				Clear_Buff();
-				MOTOR_PRINT("\r\n步进电机改为逆时针旋转\r\n");
+		 		MOTOR_PRINT("\r\n步进电机改为逆时针旋转\r\n");
 				break;
 			case 'F':
 				setStepSpeed(7000);

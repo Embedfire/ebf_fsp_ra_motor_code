@@ -4,8 +4,8 @@
 #include "gpt/bsp_gpt_pwm_output.h"
 
 
-int8_t motor_pwm_duty = 50;        // 电机PWM占空比，初始值为50。
-_Bool motor_dir;                   // 电机方向，0表示正向，1表示反向。
+int8_t motor_pwm_duty = 50;        // 电机PWM占空比，初始值为50
+_Bool motor_dir;                   // 电机方向，0表示正向，1表示反向
 
 /*电机初始化*/
 void Motor_Control_Init(void)

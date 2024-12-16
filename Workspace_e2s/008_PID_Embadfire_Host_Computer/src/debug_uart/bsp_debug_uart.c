@@ -1,5 +1,5 @@
 #include "bsp_debug_uart.h"
-
+#include "protocol/protocol.h"
 
 /* 调试串口 UART9 初始化 */
 void Debug_UART9_Init(void)
@@ -23,8 +23,10 @@ void debug_uart9_callback (uart_callback_args_t * p_args)
     {
         case UART_EVENT_RX_CHAR:
         {
-            /* 把串口接收到的数据发送回去 */
-            R_SCI_B_UART_Write(&debug_uart9_ctrl, (uint8_t *)&(p_args->data), 1);
+
+            uint8_t dr = (uint8_t)(p_args->data);
+            protocol_data_recv(&dr, 1);
+
             break;
         }
         case UART_EVENT_TX_COMPLETE:

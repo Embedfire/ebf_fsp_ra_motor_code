@@ -3,12 +3,12 @@
     <rzone name="R7FA6T2BD3CFP.rzone"/>
     <partition>
         <peripheral name="PORTA" group="PORT">
-            <slot name="PA13" secure="false"/>
-            <slot name="PA14" secure="false"/>
-            <slot name="PA15" secure="false"/>
+            <slot name="PA13" secure="true"/>
+            <slot name="PA14" secure="true"/>
+            <slot name="PA15" secure="true"/>
         </peripheral>
         <peripheral name="PORTB" group="PORT">
-            <slot name="PB03" secure="false"/>
+            <slot name="PB03" secure="true"/>
         </peripheral>
     </partition>
 </azone>

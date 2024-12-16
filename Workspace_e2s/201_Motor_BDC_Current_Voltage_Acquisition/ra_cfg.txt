@@ -228,6 +228,9 @@ FSP Configuration
   Module "ADC Driver on r_adc_b"
     Parameter Checking: Default (BSP)
     
+  Module "Transfer (r_dmac)"
+    Parameter Checking: Enabled
+    
   HAL
     Instance "g_ioport I/O Port (r_ioport)"
       Name: g_ioport
@@ -258,8 +261,8 @@ FSP Configuration
       Extra: RS-485: DE Pin Assertion Time: 1
       Extra: RS-485: DE Pin Negation Time: 1
       Interrupts: Callback: debug_uart9_callback
-      Interrupts: Receive Interrupt Priority: Priority 8
-      Interrupts: Transmit Data Empty Interrupt Priority: Priority 8
+      Interrupts: Receive Interrupt Priority: Priority 5
+      Interrupts: Transmit Data Empty Interrupt Priority: Priority 5
       Interrupts: Transmit End Interrupt Priority: Priority 8
       Interrupts: Error Interrupt Priority: Priority 8
       
@@ -267,7 +270,7 @@ FSP Configuration
       General: Name: g_timer4_pwm
       General: Channel: 4
       General: Mode: Saw-wave PWM
-      General: Period: 10
+      General: Period: 15
       General: Compare Match: Compare Match A: Status: Disabled
       General: Compare Match: Compare Match A: Compare match value: 0
       General: Compare Match: Compare Match B: Status: Disabled
@@ -319,7 +322,7 @@ FSP Configuration
       General: Name: g_timer5_pwm
       General: Channel: 5
       General: Mode: Saw-wave PWM
-      General: Period: 10
+      General: Period: 15
       General: Compare Match: Compare Match A: Status: Disabled
       General: Compare Match: Compare Match A: Compare match value: 0
       General: Compare Match: Compare Match B: Status: Disabled
@@ -445,7 +448,7 @@ FSP Configuration
       Programmable Gain Amplifier: Unit 1 - PGAIN1 / PGAVSS1: Single-ended Mode Gain: 2.500
       Programmable Gain Amplifier: Unit 2 - PGAIN2 / PGAVSS2: Single-ended Mode Gain: 2.500
       Programmable Gain Amplifier: Unit 3 - PGAIN3 / PGAVSS3: Single-ended Mode Gain: 2.500
-      User Offset Table: Entry 0: -24625
+      User Offset Table: Entry 0: 0
       User Offset Table: Entry 1: 0
       User Offset Table: Entry 2: 0
       User Offset Table: Entry 3: 0
@@ -453,7 +456,7 @@ FSP Configuration
       User Offset Table: Entry 5: 0
       User Offset Table: Entry 6: 0
       User Offset Table: Entry 7: 0
-      User Gain Table: Entry 0: 0.0298
+      User Gain Table: Entry 0: 0.027
       User Gain Table: Entry 1: 0
       User Gain Table: Entry 2: 0
       User Gain Table: Entry 3: 0
@@ -461,9 +464,9 @@ FSP Configuration
       User Gain Table: Entry 5: 0
       User Gain Table: Entry 6: 0
       User Gain Table: Entry 7: 0
-      Limiter Clipping: Interrupt Enable: Table 0
-      Limiter Clipping: Table Entry 0: Lower Limit Value: 17712
-      Limiter Clipping: Table Entry 0: Upper Limit Value: 24797
+      Limiter Clipping: Interrupt Enable: 
+      Limiter Clipping: Table Entry 0: Lower Limit Value: 0
+      Limiter Clipping: Table Entry 0: Upper Limit Value: 0
       Limiter Clipping: Table Entry 1: Lower Limit Value: 0
       Limiter Clipping: Table Entry 1: Upper Limit Value: 0
       Limiter Clipping: Table Entry 2: Lower Limit Value: 0
@@ -482,9 +485,9 @@ FSP Configuration
       Virtual Channels: Virtual Channel 0: Channel Select: AN001
       Virtual Channels: Virtual Channel 0: Sampling State Table ID: Sampling State Entry 0
       Virtual Channels: Virtual Channel 0: Channel Gain Table: Disabled
-      Virtual Channels: Virtual Channel 0: Channel Offset Table: Offset Entry 0
-      Virtual Channels: Virtual Channel 0: Add/Average Mode: Averaging Mode
-      Virtual Channels: Virtual Channel 0: Add/Average Count: 1024-time conversion (1023 Additions)
+      Virtual Channels: Virtual Channel 0: Channel Offset Table: Disabled
+      Virtual Channels: Virtual Channel 0: Add/Average Mode: Disabled
+      Virtual Channels: Virtual Channel 0: Add/Average Count: 1-time conversion (Normal Conversion)
       Virtual Channels: Virtual Channel 0: Limit Clip Table Id: Disabled
       Virtual Channels: Virtual Channel 0: Conversion Data Format Select: 16-bit Data Format
       Virtual Channels: Virtual Channel 0: Digital Filter Selection: Disabled
@@ -492,9 +495,9 @@ FSP Configuration
       Virtual Channels: Virtual Channel 1: Channel Select: AN003
       Virtual Channels: Virtual Channel 1: Sampling State Table ID: Sampling State Entry 0
       Virtual Channels: Virtual Channel 1: Channel Gain Table: Disabled
-      Virtual Channels: Virtual Channel 1: Channel Offset Table: Offset Entry 0
-      Virtual Channels: Virtual Channel 1: Add/Average Mode: Disabled
-      Virtual Channels: Virtual Channel 1: Add/Average Count: 1-time conversion (Normal Conversion)
+      Virtual Channels: Virtual Channel 1: Channel Offset Table: Disabled
+      Virtual Channels: Virtual Channel 1: Add/Average Mode: Averaging Mode
+      Virtual Channels: Virtual Channel 1: Add/Average Count: 64-time conversion (63 Additions)
       Virtual Channels: Virtual Channel 1: Limit Clip Table Id: Disabled
       Virtual Channels: Virtual Channel 1: Conversion Data Format Select: 16-bit Data Format
       Virtual Channels: Virtual Channel 1: Digital Filter Selection: Disabled
@@ -856,9 +859,9 @@ FSP Configuration
       Scan Groups: Scan Group 0: External Trigger Enable: 
       Scan Groups: Scan Group 0: ELC Trigger Enable: 
       Scan Groups: Scan Group 0: GPT Trigger Enable: 
-      Scan Groups: Scan Group 0: Limit Clip Interrupt Enable: Enable
-      Scan Groups: Scan Group 0: FIFO Enable: Enable
-      Scan Groups: Scan Group 0: FIFO Interrupt Enable: Enable
+      Scan Groups: Scan Group 0: Limit Clip Interrupt Enable: Disable
+      Scan Groups: Scan Group 0: FIFO Enable: Disable
+      Scan Groups: Scan Group 0: FIFO Interrupt Enable: Disable
       Scan Groups: Scan Group 0: FIFO Interrupt Generation Level : 0
       Scan Groups: Scan Group 1: Enable: Disable
       Scan Groups: Scan Group 1: Converter Selection: ADC 0
@@ -961,7 +964,7 @@ FSP Configuration
       General: Name: g_timer_gpt0
       General: Channel: 0
       General: Mode: Periodic
-      General: Period: 5
+      General: Period: 500
       General: Compare Match: Compare Match A: Status: Disabled
       General: Compare Match: Compare Match A: Compare match value: 0
       General: Compare Match: Compare Match B: Status: Disabled
@@ -1008,4 +1011,21 @@ FSP Configuration
       Extra Features: Interrupt Skipping (Channels with GTITC only): Skip ADC Events: None
       Extra Features: Output Disable: GTIOCA Disable Setting: Disable Prohibited
       Extra Features: Output Disable: GTIOCB Disable Setting: Disable Prohibited
+      
+    Instance "g_adc_transfer Transfer (r_dmac) ADC ADI0 (End of A/D scanning operation(Gr.0))"
+      Name: g_adc_transfer
+      Channel: 0
+      Mode: Block
+      Transfer Size: 4 Bytes
+      Destination Address Mode: Incremented
+      Source Address Mode: Incremented
+      Repeat Area (Unused in Normal Mode): Source
+      Number of Transfers: 4
+      Number of Blocks (Valid only in Repeat,Block or Repeat-Block Mode): 1
+      Activation Source: ADC ADI0 (End of A/D scanning operation(Gr.0))
+      Callback: dmac_callback
+      Transfer End Interrupt Priority: Priority 2
+      Interrupt Frequency: Interrupt after each block, or repeat size is transfered
+      Offset value (Valid only when address mode is \'Offset\'): 1
+      Source Buffer Size: 1
       

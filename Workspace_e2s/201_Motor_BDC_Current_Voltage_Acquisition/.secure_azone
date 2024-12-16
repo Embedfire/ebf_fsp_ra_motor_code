@@ -24,6 +24,7 @@
         <peripheral name="GPT4" group="GPT" security=""/>
         <peripheral name="GPT5" group="GPT" security=""/>
         <peripheral name="GPT0" group="GPT" security=""/>
+        <peripheral name="DMA_DMAC0" group="DMA_DMAC" security=""/>
         <peripheral name="ICU">
             <slot name="IRQ0" secure="true"/>
             <slot name="IRQ1" secure="true"/>
@@ -50,6 +51,7 @@
             <slot name="IRQ22" secure="true"/>
             <slot name="IRQ23" secure="true"/>
             <slot name="IRQ24" secure="true"/>
+            <slot name="IRQ25" secure="true"/>
         </peripheral>
     </partition>
 </azone>

@@ -3,6 +3,7 @@
 #include "beep/bsp_beep.h"
 #include "key/bsp_key_irq.h"
 #include "debug_uart/bsp_debug_uart.h"
+
 FSP_CPP_HEADER
 void R_BSP_WarmStart(bsp_warm_start_event_t event);
 FSP_CPP_FOOTER

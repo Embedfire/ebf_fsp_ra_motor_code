@@ -264,7 +264,7 @@ FSP Configuration
       General: Name: g_timer4_pwm
       General: Channel: 4
       General: Mode: Saw-wave PWM
-      General: Period: 20
+      General: Period: 10
       General: Compare Match: Compare Match A: Status: Disabled
       General: Compare Match: Compare Match A: Compare match value: 0
       General: Compare Match: Compare Match B: Status: Disabled
@@ -316,7 +316,7 @@ FSP Configuration
       General: Name: g_timer5_pwm
       General: Channel: 5
       General: Mode: Saw-wave PWM
-      General: Period: 20
+      General: Period: 10
       General: Compare Match: Compare Match A: Status: Disabled
       General: Compare Match: Compare Match A: Compare match value: 0
       General: Compare Match: Compare Match B: Status: Disabled

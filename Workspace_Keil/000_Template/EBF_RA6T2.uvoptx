@@ -103,7 +103,7 @@
         <bEvRecOn>1</bEvRecOn>
         <bSchkAxf>0</bSchkAxf>
         <bTchkAxf>0</bTchkAxf>
-        <nTsel>14</nTsel>
+        <nTsel>4</nTsel>
         <sDll></sDll>
         <sDllPa></sDllPa>
         <sDlgDll></sDlgDll>
@@ -114,9 +114,14 @@
         <tDlgDll></tDlgDll>
         <tDlgPa></tDlgPa>
         <tIfile></tIfile>
-        <pMon>BIN\CMSIS_AGDI_V8M.DLL</pMon>
+        <pMon>Segger\JL2CM3.dll</pMon>
       </DebugOpt>
       <TargetDriverDllRegistry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>JL2CM3</Key>
+          <Name>-U260102451 -O78 -S2 -ZTIFSpeedSel5000 -A0 -C0 -JU1 -JI127.0.0.1 -JP0 -RST0 -N00("ARM CoreSight SW-DP") -D00(6BA02477) -L00(0) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -TB1 -TFE0 -FO31 -FD20000000 -FC2000 -FN3 -FF0RA6T2_512K.FLM -FS00 -FL080000 -FP0($$Device:R7FA6T2BD$Flash\RA6T2_512K.FLM) -FF1RA6T2_DATA_C512K.FLM -FS18000000 -FL14000 -FP1($$Device:R7FA6T2BD$Flash\RA6T2_DATA_C512K.FLM) -FF2RA6T2_CONF.FLM -FS2100A000 -FL2300 -FP2($$Device:R7FA6T2BD$Flash\RA6T2_CONF.FLM)</Name>
+        </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
           <Key>UL2V8M</Key>
@@ -125,7 +130,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>CMSIS_AGDI_V8M</Key>
-          <Name>-X"fire CMSIS-DAP" -U1d3431d77b0d10a8 -O206 -S9 -C0 -P00000000 -N00("ARM CoreSight SW-DP") -D00(6BA02477) -L00(0) -TO65554 -TC10000000 -TT10000000 -TP20 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC2000 -FN3 -FF0RA6T2_512K.FLM -FS00 -FL080000 -FP0($$Device:R7FA6T2BD$Flash\RA6T2_512K.FLM) -FF1RA6T2_DATA_C512K.FLM -FS18000000 -FL14000 -FP1($$Device:R7FA6T2BD$Flash\RA6T2_DATA_C512K.FLM) -FF2RA6T2_CONF.FLM -FS2100A000 -FL2300 -FP2($$Device:R7FA6T2BD$Flash\RA6T2_CONF.FLM)</Name>
+          <Name>-X"fire CMSIS-DAP" -U1d3431d77b0d10a8 -O206 -S8 -C0 -P00000000 -N00("") -D00(00000000) -L00(0) -TO65554 -TC10000000 -TT10000000 -TP20 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO31 -FD20000000 -FC2000 -FN3 -FF0RA6T2_512K.FLM -FS00 -FL080000 -FP0($$Device:R7FA6T2BD$Flash\RA6T2_512K.FLM) -FF1RA6T2_DATA_C512K.FLM -FS18000000 -FL14000 -FP1($$Device:R7FA6T2BD$Flash\RA6T2_DATA_C512K.FLM) -FF2RA6T2_CONF.FLM -FS2100A000 -FL2300 -FP2($$Device:R7FA6T2BD$Flash\RA6T2_CONF.FLM)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
       <Breakpoint/>
@@ -171,6 +176,13 @@
       <pszMrulep></pszMrulep>
       <pSingCmdsp></pSingCmdsp>
       <pMultCmdsp></pMultCmdsp>
+      <DebugDescription>
+        <Enable>1</Enable>
+        <EnableFlashSeq>1</EnableFlashSeq>
+        <EnableLog>0</EnableLog>
+        <Protocol>2</Protocol>
+        <DbgClock>10000000</DbgClock>
+      </DebugDescription>
     </TargetOption>
   </Target>
 

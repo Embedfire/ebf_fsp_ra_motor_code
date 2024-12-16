@@ -1,6 +1,11 @@
 #include "bsp_debug_uart.h"
 
 
+// 定义 Order 变量，初始化为空字符
+char Order = '\0';
+
+
+
 /* 调试串口 UART9 初始化 */
 void Debug_UART9_Init(void)
 {
@@ -10,12 +15,6 @@ void Debug_UART9_Init(void)
 
     assert(FSP_SUCCESS == err);
 }
-// 电机功能操作允许标志位
-volatile bool motor_start_flag = false;
-volatile bool motor_stop_flag = false;
-volatile bool motor_speedup_flag = false;
-volatile bool motor_slowdown_flag = false;
-volatile bool motor_reverse_flag = false;
 
 /* 发送完成标志 */
 volatile bool uart_send_complete_flag = false;
@@ -28,29 +27,8 @@ void debug_uart9_callback (uart_callback_args_t * p_args)
     {
         case UART_EVENT_RX_CHAR:
         {
-            /* 根据字符指令进行操作 */
-            switch (p_args->data)
-            {
-                case 's':   //start
-                    motor_start_flag = true;
-                    break;
-                case 'p':   //pause
-                    motor_stop_flag = true;
-                    break;
-                case 'u':   //up
-                    motor_speedup_flag = true;
-                    break;
-                case 'd':   //down
-                    motor_slowdown_flag = true;
-                    break;
-                case 'r':   //reverse
-                    motor_reverse_flag = true;
-                    break;
-                default:
-                    // input error
-                    break;
-            }
-            break;
+            // 将接收到的的值转换为 char 类型，并赋值给 Order
+            Order = (char)(p_args->data);
             break;
         }
         case UART_EVENT_TX_COMPLETE:
