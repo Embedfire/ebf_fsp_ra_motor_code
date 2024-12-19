@@ -93,7 +93,7 @@ void Motor_Control_SetDirAndCount(uint8_t dir, float pwm_count)
     }
 }
 
-float cont_val = 0;   // 当前控制值
+
 /**
  * @brief  电机位置式 PID 控制实现（定时调用）
  *
@@ -102,14 +102,15 @@ float cont_val = 0;   // 当前控制值
  * @param[in] actual_current  当前电机实际位置（如速度、位置等）
  * @retval 无
  */
-void motor_pid_control(float actual_speed)
+void motor_pid_control(float actual_location)
 {
-    int32_t speed = (int32_t)actual_speed;   // 将实际位置转换为整数类型
+    int32_t location = (int32_t)actual_location;   // 将实际位置转换为整数类型
+    float cont_val = 0;   // 当前控制值
 
     if (motor_state == true)   // 当电机处于启用状态时
     {
         // 进行 PID 计算
-        cont_val = PID_realize(actual_speed);
+        cont_val = PID_realize(actual_location);
 
 
         if (cont_val > 0)
@@ -132,7 +133,7 @@ void motor_pid_control(float actual_speed)
         Motor_Control_SetDirAndCount(motor_dir, cont_val);
 
         // 向通道 1 发送当前实际位置值
-        set_computer_value(SEND_FACT_CMD, CURVES_CH1, &speed, 1);
+        set_computer_value(SEND_FACT_CMD, CURVES_CH1, &location, 1);
     }
 }
 

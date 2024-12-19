@@ -6,6 +6,7 @@
 #include "gpt/bsp_gpt_timing.h"
 #include "debug_uart/bsp_debug_uart.h"
 #include "gpt/bsp_gpt_pwm_output.h"
+#include "adc/motor_v_c_acquisition.h"
 #include "encoder/bsp_encoder.h"
 #include "pid/bsp_pid.h"
 #include "protocol/protocol.h"
@@ -19,10 +20,11 @@ extern char Order;  // 外部变量 Order 的声明，表示命令字符
 extern int8_t motor_pwm_duty;
 extern _Bool motor_dir;
 
+
 void Process_Motor_Command(void);  // 处理电机命令的函数声明
 
 /*目标值*/
-int32_t target_location = CIRCLE_PULSES;
+int32_t target_location = 0;
 
 //按键2中断回调函数
 void sw2_irq_callback(external_irq_callback_args_t *p_args)
@@ -31,8 +33,8 @@ void sw2_irq_callback(external_irq_callback_args_t *p_args)
     FSP_PARAMETER_NOT_USED(p_args);
 
     /* 增加一圈 */
-    target_location +=  (uint32_t)CIRCLE_PULSES;
-    set_pid_target((float)target_location);
+    target_location +=  (int32_t)CIRCLE_PULSES;
+    set_pid_target(&pid_location, target_location);
 
     set_computer_value(SEND_TARGET_CMD, CURVES_CH1, &target_location, 1);     // 给通道 1 发送目标值
 }
@@ -45,7 +47,7 @@ void sw3_irq_callback(external_irq_callback_args_t *p_args)
 
     /* 增加一圈 */
     target_location -=  (int32_t)CIRCLE_PULSES;
-    set_pid_target((float)target_location);
+    set_pid_target(&pid_location, target_location);
 
     set_computer_value(SEND_TARGET_CMD, CURVES_CH1, &target_location, 1);     // 给通道 1 发送目标值
 }
@@ -58,6 +60,8 @@ void hal_entry(void)
 {
 
         /* TODO: add your own code here */
+        uint8_t target_curr = 50;
+        uint8_t target_speed = 50;
         LED_Init();         // LED 初始化
         Debug_UART9_Init(); // SCI9 UART 调试串口初始化
         IRQ_Init();         //按键中断初始化
@@ -65,6 +69,9 @@ void hal_entry(void)
         /* 电机PWM初始化 */
         Motor_GPT_PWM_Init();
         Motor_Control_Init();
+
+        /*ADC与DMAC初始化*/
+        ADC_DMAC_Init();
 
         //初始化编码器
         initEncoder();
@@ -80,9 +87,10 @@ void hal_entry(void)
         /*PID参数初始化*/
         PID_param_init();
 
-        set_computer_value(SEND_STOP_CMD, CURVES_CH1, NULL, 0);                // 同步上位机的启动按钮状态
+        set_computer_value(SEND_STOP_CMD, CURVES_CH1, NULL, 0);                   // 同步上位机的启动按钮状态
         set_computer_value(SEND_TARGET_CMD, CURVES_CH1, &target_location, 1);     // 给通道 1 发送目标值
-
+        set_computer_value(SEND_TARGET_CMD, CURVES_CH2, &target_speed, 1);        // 给通道 2 发送目标值
+        set_computer_value(SEND_TARGET_CMD, CURVES_CH3, &target_curr, 1);         // 给通道 3 发送目标值
         while(1)
         {
             /* 接收数据处理 */

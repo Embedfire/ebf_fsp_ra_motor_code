@@ -18,14 +18,16 @@ extern "C" {
 /* 校验数据的长度 */
 #define PROT_FRAME_LEN_CHECKSUM    1
 
+#pragma pack(push, 1)
 /* 数据头结构体 */
-typedef __packed struct
+typedef struct
 {
   uint32_t head;    // 包头
   uint8_t ch;       // 通道
   uint32_t len;     // 包长度
   uint8_t cmd;      // 命令
 //  uint8_t sum;      // 校验和
+
 }packet_head_t;
 
 /* 联合体（方便数据转换） */

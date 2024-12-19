@@ -16,12 +16,15 @@
 /* 最大比较值 */
 #define PWM_MAX_PERIOD_COUNT              (PWM_PERIOD_COUNT - 100)
 
+#define TARGET_CURRENT_MAX    200    // 目标电流的最大值 mA
+#define TARGET_SPEED_MAX      200    // 目标速度的最大值 r/m
+
 void Motor_Control_Init(void);
 void Motor_Control_Start(void);
 void Motor_Control_Stop(void);
 void Motor_Control_Reverse(void);
 void Motor_Control_SetDirAndDuty(uint8_t dir, uint8_t pwm_duty);
 void Motor_Control_SetDirAndCount(uint8_t dir, float pwm_count);
-void motor_pid_control(float actual_location);
+void motor_pid_control(float actual_location,float actual_speed,float actual_current);
 
 #endif /* MOTOR_CONTROL_MOTOR_CONTROL_H_ */

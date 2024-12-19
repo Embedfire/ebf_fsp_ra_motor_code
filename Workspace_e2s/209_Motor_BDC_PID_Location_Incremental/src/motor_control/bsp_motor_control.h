@@ -22,6 +22,6 @@ void Motor_Control_Stop(void);
 void Motor_Control_Reverse(void);
 void Motor_Control_SetDirAndDuty(uint8_t dir, uint8_t pwm_duty);
 void Motor_Control_SetDirAndCount(uint8_t dir, float pwm_count);
-void motor_pid_control(float actual_speed);
+void motor_pid_control(float actual_location);
 
 #endif /* MOTOR_CONTROL_MOTOR_CONTROL_H_ */
