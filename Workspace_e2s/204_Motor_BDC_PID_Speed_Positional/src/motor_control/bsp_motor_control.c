@@ -10,6 +10,7 @@ int8_t motor_pwm_duty = 50;        // 电机PWM占空比，初始值为50。
 _Bool motor_dir;                   // 电机方向，0表示正向，1表示反向。
 _Bool motor_state = false;
 extern volatile uint32_t pulse_period;   // 脉冲数
+extern volatile _Bool flag;           // 方向标志，true 为正转，false 为反转
 
 /*电机初始化*/
 void Motor_Control_Init(void)
