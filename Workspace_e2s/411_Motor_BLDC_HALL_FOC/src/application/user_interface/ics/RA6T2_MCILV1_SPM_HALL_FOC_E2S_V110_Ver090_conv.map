@@ -1,0 +1,1363 @@
+Renesas Optimizing Linker
+_g_f4_id_ref_monitor
+2000015c  4  data ,g
+_g_f4_id_ad_monitor
+20000158  4  data ,g
+_g_f4_iq_ref_monitor
+20000154  4  data ,g
+_g_f4_iq_ad_monitor
+20000150  4  data ,g
+_g_f4_iu_ad_monitor
+2000014c  4  data ,g
+_g_f4_iv_ad_monitor
+20000148  4  data ,g
+_g_f4_iw_ad_monitor
+20000144  4  data ,g
+_g_f4_vdc_ad_monitor
+20000140  4  data ,g
+_g_f4_vd_ref_monitor
+2000013c  4  data ,g
+_g_f4_vq_ref_monitor
+20000138  4  data ,g
+_g_f4_refu_monitor
+20000134  4  data ,g
+_g_f4_refv_monitor
+20000130  4  data ,g
+_g_f4_refw_monitor
+2000012c  4  data ,g
+_g_f4_angle_rad_monitor
+20000128  4  data ,g
+_g_f4_speed_est_monitor
+20000124  4  data ,g
+_g_f4_speed_ref_monitor
+20000120  4  data ,g
+_g_u1_state_id_ref_monitor
+2000011e  1  data ,g
+_g_u1_state_iq_ref_monitor
+2000011d  1  data ,g
+_g_u1_state_speed_ref_monitor
+2000011c  1  data ,g
+_g_f4_speed_kp_monitor
+20000118  4  data ,g
+_g_f4_speed_ki_monitor
+20000114  4  data ,g
+_g_f4_current_kp_d_monitor
+20000110  4  data ,g
+_g_f4_current_ki_d_monitor
+2000010c  4  data ,g
+_g_f4_current_kp_q_monitor
+20000108  4  data ,g
+_g_f4_current_ki_q_monitor
+20000104  4  data ,g
+_g_f4_speed_rpm_monitor
+20000100  4  data ,g
+_com_f4_ref_speed_rpm
+200000fc  4  data ,g
+_com_u2_mtr_pp
+200000f8  2  data ,g
+_com_f4_mtr_r
+200000f4  4  data ,g
+_com_f4_mtr_ld
+200000f0  4  data ,g
+_com_f4_mtr_lq
+200000ec  4  data ,g
+_com_f4_mtr_m
+200000e8  4  data ,g
+_com_f4_mtr_j
+200000e4  4  data ,g
+_com_f4_current_omega
+200000e0  4  data ,g
+_com_f4_current_zeta
+200000dc  4  data ,g
+_com_f4_speed_omega
+200000d8  4  data ,g
+_com_f4_speed_zeta
+200000d4  4  data ,g
+_com_f4_max_speed_rpm
+200000d0  4  data ,g
+_com_f4_overspeed_limit_rpm
+200000cc  4  data ,g
+_com_f4_overcurrent_limit
+200000c8  4  data ,g
+_com_f4_iq_limit
+200000c4  4  data ,g
+_com_f4_limit_speed_change
+200000c0  4  data ,g
+_com_u1_enable_write
+200000be  1  data ,g
+_g_u1_enable_write
+200000bd  1  data ,g
+_g_u1_trig_enable_write
+200000bc  1  data ,g
+_g_f4_speed_ref
+200003dc  4  data ,g
+_g_u1_motor_status
+200003d8  1  data ,g
+_com_u1_sw_userif
+200003d7  1  data ,g
+_g_u1_sw_userif
+200003d6  1  data ,g
+_com_u1_mode_system
+200003d5  1  data ,g
+_g_u1_mode_system
+200003d4  1  data ,g
+_g_u2_max_speed_rpm
+200003d2  2  data ,g
+_g_u1_stop_req
+200003d0  1  data ,g
+_g_u2_chk_error
+200003ce  2  data ,g
+_g_u2_vr1_ad
+200003cc  2  data ,g
+_g_u2_conf_hw
+200003ca  2  data ,g
+_g_u2_conf_sw
+200003c8  2  data ,g
+_g_u2_conf_tool
+200003c6  2  data ,g
+_g_u1_conf_motor_type_len
+200003c4  1  data ,g
+_g_u1_conf_control_len
+200003c3  1  data ,g
+_g_u1_conf_inverter_len
+200003c2  1  data ,g
+_g_u1_conf_motor_type
+200003b0  12  data ,g
+_g_u1_conf_control
+2000038c  23  data ,g
+_g_u1_conf_inverter
+20000384  8  data ,g
+_g_u1_reset_req
+20000381  1  data ,g
+_g_u1_sw_cnt
+20000380  1  data ,g
+_g_user_motor_cfg
+2000036c  14  data ,g
+struct  {
+_g_user_motor_cfg.p_motor_speed_instance
+2000036c  4  [pointer]
+_g_user_motor_cfg.p_motor_current_instance
+20000370  4  [pointer]
+_g_user_motor_cfg.p_callback
+20000374  4  [pointer]
+_g_user_motor_cfg.p_context
+20000378  4  [pointer]
+_g_user_motor_cfg.p_extend
+2000037c  4  [pointer]
+}
+_g_user_motor_hall_extended_cfg
+2000035c  10  data ,g
+struct  {
+_g_user_motor_hall_extended_cfg.f_overcurrent_limit
+2000035c  4  float
+_g_user_motor_hall_extended_cfg.f_overvoltage_limit
+20000360  4  float
+_g_user_motor_hall_extended_cfg.f_overspeed_limit
+20000364  4  float
+_g_user_motor_hall_extended_cfg.f_lowvoltage_limit
+20000368  4  float
+}
+_g_user_motor_speed_cfg
+20000340  1c  data ,g
+struct  {
+_g_user_motor_speed_cfg.st_input
+20000340  4  [pointer]
+_g_user_motor_speed_cfg.st_output
+20000344  4  [pointer]
+_g_user_motor_speed_cfg.p_timer_instance
+20000348  4  [pointer]
+_g_user_motor_speed_cfg.p_position_instance
+2000034c  4  [pointer]
+_g_user_motor_speed_cfg.p_callback
+20000350  4  [pointer]
+_g_user_motor_speed_cfg.p_context
+20000354  4  [pointer]
+_g_user_motor_speed_cfg.p_extend
+20000358  4  [pointer]
+}
+_g_user_motor_speed_extended_cfg
+200002a0  a0  data ,g
+struct  {
+_g_user_motor_speed_extended_cfg.u1_ctrl_method
+200002a0  1  unsigned char
+_g_user_motor_speed_extended_cfg.f_speed_ctrl_period
+200002a4  4  float
+_g_user_motor_speed_extended_cfg.f_limit_speed_change
+200002a8  4  float
+_g_user_motor_speed_extended_cfg.f_max_speed_rad
+200002ac  4  float
+_g_user_motor_speed_extended_cfg.f_omega_t
+200002b0  4  float
+_g_user_motor_speed_extended_cfg.f_id_up_speed_rad
+200002b4  4  float
+_g_user_motor_speed_extended_cfg.f_iq_limit
+200002b8  4  float
+_g_user_motor_speed_extended_cfg.f_ol_fb_speed_limit_rate
+200002bc  4  float
+_g_user_motor_speed_extended_cfg.f_natural_frequency
+200002c0  4  float
+_g_user_motor_speed_extended_cfg.u1_openloop_damping
+200002c4  1  enum
+_g_user_motor_speed_extended_cfg.u1_flux_weakening
+200002c5  1  enum
+_g_user_motor_speed_extended_cfg.u1_less_switch
+200002c6  1  enum
+_g_user_motor_speed_extended_cfg.u1_observer_swtich
+200002c7  1  enum
+_g_user_motor_speed_extended_cfg.observer_select
+200002c8  1  enum
+_g_user_motor_speed_extended_cfg.ol_param
+200002cc  20
+struct  {
+_g_user_motor_speed_extended_cfg.ol_param.f4_ol_id_up_step
+200002cc  4  float
+_g_user_motor_speed_extended_cfg.ol_param.f4_ol_id_down_step
+200002d0  4  float
+_g_user_motor_speed_extended_cfg.ol_param.f4_ol_iq_down_step_ratio
+200002d4  4  float
+_g_user_motor_speed_extended_cfg.ol_param.f4_ol_id_ref
+200002d8  4  float
+_g_user_motor_speed_extended_cfg.ol_param.f4_id_down_speed_rad
+200002dc  4  float
+_g_user_motor_speed_extended_cfg.ol_param.f4_id_up_speed_rad
+200002e0  4  float
+_g_user_motor_speed_extended_cfg.ol_param.f4_opl2less_sw_time
+200002e4  4  float
+_g_user_motor_speed_extended_cfg.ol_param.f4_switch_phase_err_rad
+200002e8  4  float
+}
+_g_user_motor_speed_extended_cfg.ol_sub_param
+200002ec  1c
+struct  {
+_g_user_motor_speed_extended_cfg.ol_sub_param.st_ed_lpf
+200002ec  14
+struct  {
+_g_user_motor_speed_extended_cfg.ol_sub_param.st_ed_lpf.f_pre_output
+200002ec  4  float
+_g_user_motor_speed_extended_cfg.ol_sub_param.st_ed_lpf.f_pre_input
+200002f0  4  float
+_g_user_motor_speed_extended_cfg.ol_sub_param.st_ed_lpf.f_omega_t
+200002f4  4  float
+_g_user_motor_speed_extended_cfg.ol_sub_param.st_ed_lpf.f_gain_ka
+200002f8  4  float
+_g_user_motor_speed_extended_cfg.ol_sub_param.st_ed_lpf.f_gain_kb
+200002fc  4  float
+}
+_g_user_motor_speed_extended_cfg.ol_sub_param.f_damp_comp_gain
+20000300  4  float
+_g_user_motor_speed_extended_cfg.ol_sub_param.f_fb_speed_limit_rate
+20000304  4  float
+}
+_g_user_motor_speed_extended_cfg.d_param
+20000308  1c
+struct  {
+_g_user_motor_speed_extended_cfg.d_param.f_speed_omega
+20000308  4  float
+_g_user_motor_speed_extended_cfg.d_param.f_speed_zeta
+2000030c  4  float
+_g_user_motor_speed_extended_cfg.d_param.f_ed_hpf_omega
+20000310  4  float
+_g_user_motor_speed_extended_cfg.d_param.f_ol_damping_zeta
+20000314  4  float
+_g_user_motor_speed_extended_cfg.d_param.f_phase_err_lpf_cut_freq
+20000318  4  float
+_g_user_motor_speed_extended_cfg.d_param.f_observer_omega
+2000031c  4  float
+_g_user_motor_speed_extended_cfg.d_param.f_observer_zeta
+20000320  4  float
+}
+_g_user_motor_speed_extended_cfg.control_type
+20000324  1  enum
+_g_user_motor_speed_extended_cfg.mtr_param
+20000328  18
+struct  {
+_g_user_motor_speed_extended_cfg.mtr_param.u2_mtr_pp
+20000328  2  unsigned short
+_g_user_motor_speed_extended_cfg.mtr_param.f4_mtr_r
+2000032c  4  float
+_g_user_motor_speed_extended_cfg.mtr_param.f4_mtr_ld
+20000330  4  float
+_g_user_motor_speed_extended_cfg.mtr_param.f4_mtr_lq
+20000334  4  float
+_g_user_motor_speed_extended_cfg.mtr_param.f4_mtr_m
+20000338  4  float
+_g_user_motor_speed_extended_cfg.mtr_param.f4_mtr_j
+2000033c  4  float
+}
+}
+_g_user_motor_current_cfg
+2000028c  14  data ,g
+struct  {
+_g_user_motor_current_cfg.p_motor_driver_instance
+2000028c  4  [pointer]
+_g_user_motor_current_cfg.p_motor_angle_instance
+20000290  4  [pointer]
+_g_user_motor_current_cfg.p_callback
+20000294  4  [pointer]
+_g_user_motor_current_cfg.p_context
+20000298  4  [pointer]
+_g_user_motor_current_cfg.p_extend
+2000029c  4  [pointer]
+}
+_g_user_motor_current_extended_cfg
+20000248  44  data ,g
+struct  {
+_g_user_motor_current_extended_cfg.u1_control_type
+20000248  1  enum
+_g_user_motor_current_extended_cfg.shunt
+20000249  1  enum
+_g_user_motor_current_extended_cfg.f_comp_v
+2000024c  14  float
+_g_user_motor_current_extended_cfg.f_comp_i
+20000260  14  float
+_g_user_motor_current_extended_cfg.vcomp_enable
+20000274  1  enum
+_g_user_motor_current_extended_cfg.u1_sample_delay_comp_enable
+20000275  1  enum
+_g_user_motor_current_extended_cfg.f_period_magnitude_value
+20000278  4  float
+_g_user_motor_current_extended_cfg.f_current_ctrl_period
+2000027c  4  float
+_g_user_motor_current_extended_cfg.f_ilimit
+20000280  4  float
+_g_user_motor_current_extended_cfg.p_motor_parameter
+20000284  4  [pointer]
+_g_user_motor_current_extended_cfg.p_design_parameter
+20000288  4  [pointer]
+}
+_g_user_motor_angle_cfg
+20000240  8  data ,g
+struct  {
+_g_user_motor_angle_cfg.p_context
+20000240  4  [pointer]
+_g_user_motor_angle_cfg.p_extend
+20000244  4  [pointer]
+}
+_g_user_motor_sense_hall_extended_cfg
+20000210  30  data ,g
+struct  {
+_g_user_motor_sense_hall_extended_cfg.port_hall_sensor_u
+20000210  2  enum
+_g_user_motor_sense_hall_extended_cfg.port_hall_sensor_v
+20000212  2  enum
+_g_user_motor_sense_hall_extended_cfg.port_hall_sensor_w
+20000214  2  enum
+_g_user_motor_sense_hall_extended_cfg.u1_hall_pattern
+20000216  7  unsigned char
+_g_user_motor_sense_hall_extended_cfg.f_pwm_carrier_freq
+20000220  4  float
+_g_user_motor_sense_hall_extended_cfg.f_angle_correct
+20000224  4  float
+_g_user_motor_sense_hall_extended_cfg.u1_trigger_hall_signal_count
+20000228  1  unsigned char
+_g_user_motor_sense_hall_extended_cfg.f4_target_pseudo_speed_rad
+2000022c  4  float
+_g_user_motor_sense_hall_extended_cfg.f4_reach_time_msec
+20000230  4  float
+_g_user_motor_sense_hall_extended_cfg.u2_trigger_carrier_count
+20000234  2  unsigned short
+_g_user_motor_sense_hall_extended_cfg.u2_default_counts
+20000236  2  unsigned short
+_g_user_motor_sense_hall_extended_cfg.u2_maximum_period
+20000238  2  unsigned short
+_g_user_motor_sense_hall_extended_cfg.u1_hall_polepairs
+2000023a  1  unsigned char
+_g_user_motor_sense_hall_extended_cfg.f4_start_speed_rad
+2000023c  4  float
+}
+_g_user_motor_driver_cfg
+200001ec  24  data ,g
+struct  {
+_g_user_motor_driver_cfg.p_adc_instance
+200001ec  4  [pointer]
+_g_user_motor_driver_cfg.iu_ad_ch
+200001f0  1  enum
+_g_user_motor_driver_cfg.iv_ad_ch
+200001f1  1  enum
+_g_user_motor_driver_cfg.iw_ad_ch
+200001f2  1  enum
+_g_user_motor_driver_cfg.vdc_ad_ch
+200001f3  1  enum
+_g_user_motor_driver_cfg.sin_ad_ch
+200001f4  1  enum
+_g_user_motor_driver_cfg.cos_ad_ch
+200001f5  1  enum
+_g_user_motor_driver_cfg.p_adc2_instance
+200001f8  4  [pointer]
+_g_user_motor_driver_cfg.shunt
+200001fc  1  enum
+_g_user_motor_driver_cfg.p_three_phase_instance
+20000200  4  [pointer]
+_g_user_motor_driver_cfg.p_callback
+20000204  4  [pointer]
+_g_user_motor_driver_cfg.p_context
+20000208  4  [pointer]
+_g_user_motor_driver_cfg.p_extend
+2000020c  4  [pointer]
+}
+_g_user_motor_driver_extended_cfg
+20000184  68  data ,g
+struct  {
+_g_user_motor_driver_extended_cfg.u2_pwm_timer_freq
+20000184  2  unsigned short
+_g_user_motor_driver_extended_cfg.u2_pwm_carrier_freq
+20000186  2  unsigned short
+_g_user_motor_driver_extended_cfg.u2_deadtime
+20000188  2  unsigned short
+_g_user_motor_driver_extended_cfg.f_current_range
+2000018c  4  float
+_g_user_motor_driver_extended_cfg.f_vdc_range
+20000190  4  float
+_g_user_motor_driver_extended_cfg.f_ad_resolution
+20000194  4  float
+_g_user_motor_driver_extended_cfg.f_ad_current_offset
+20000198  4  float
+_g_user_motor_driver_extended_cfg.f_ad_voltage_conversion
+2000019c  4  float
+_g_user_motor_driver_extended_cfg.u2_offset_calc_count
+200001a0  2  unsigned short
+_g_user_motor_driver_extended_cfg.modulation_method
+200001a2  1  enum
+_g_user_motor_driver_extended_cfg.port_up
+200001a4  2  enum
+_g_user_motor_driver_extended_cfg.port_un
+200001a6  2  enum
+_g_user_motor_driver_extended_cfg.port_vp
+200001a8  2  enum
+_g_user_motor_driver_extended_cfg.port_vn
+200001aa  2  enum
+_g_user_motor_driver_extended_cfg.port_wp
+200001ac  2  enum
+_g_user_motor_driver_extended_cfg.port_wn
+200001ae  2  enum
+_g_user_motor_driver_extended_cfg.f_ad_current_adjust
+200001b0  4  float
+_g_user_motor_driver_extended_cfg.s4_difference_minimum
+200001b4  4  long
+_g_user_motor_driver_extended_cfg.s4_adjust_adc_delay
+200001b8  4  long
+_g_user_motor_driver_extended_cfg.trigger_phase
+200001bc  1  enum
+_g_user_motor_driver_extended_cfg.adc_group
+200001be  2  enum
+_g_user_motor_driver_extended_cfg.iu_ad_unit
+200001c0  1  unsigned char
+_g_user_motor_driver_extended_cfg.iv_ad_unit
+200001c1  1  unsigned char
+_g_user_motor_driver_extended_cfg.iw_ad_unit
+200001c2  1  unsigned char
+_g_user_motor_driver_extended_cfg.vdc_ad_unit
+200001c3  1  unsigned char
+_g_user_motor_driver_extended_cfg.sin_ad_unit
+200001c4  1  unsigned char
+_g_user_motor_driver_extended_cfg.cos_ad_unit
+200001c5  1  unsigned char
+_g_user_motor_driver_extended_cfg.mod_param
+200001c8  1c
+struct  {
+_g_user_motor_driver_extended_cfg.mod_param.f4_vdc
+200001c8  4  float
+_g_user_motor_driver_extended_cfg.mod_param.f4_1_div_vdc
+200001cc  4  float
+_g_user_motor_driver_extended_cfg.mod_param.f4_voltage_error_ratio
+200001d0  4  float
+_g_user_motor_driver_extended_cfg.mod_param.f4_max_duty
+200001d4  4  float
+_g_user_motor_driver_extended_cfg.mod_param.f4_min_duty
+200001d8  4  float
+_g_user_motor_driver_extended_cfg.mod_param.f4_neutral_duty
+200001dc  4  float
+_g_user_motor_driver_extended_cfg.mod_param.u1_sat_flag
+200001e0  1  unsigned char
+}
+_g_user_motor_driver_extended_cfg.interrupt_adc
+200001e4  1  enum
+_g_user_motor_driver_extended_cfg.p_shared_cfg
+200001e8  4  [pointer]
+}
+_g_user_motor_current_motor_parameter
+2000016c  18  data ,g
+struct  {
+_g_user_motor_current_motor_parameter.u2_mtr_pp
+2000016c  2  unsigned short
+_g_user_motor_current_motor_parameter.f4_mtr_r
+20000170  4  float
+_g_user_motor_current_motor_parameter.f4_mtr_ld
+20000174  4  float
+_g_user_motor_current_motor_parameter.f4_mtr_lq
+20000178  4  float
+_g_user_motor_current_motor_parameter.f4_mtr_m
+2000017c  4  float
+_g_user_motor_current_motor_parameter.f4_mtr_j
+20000180  4  float
+}
+_g_user_motor_current_design_parameter
+20000164  8  data ,g
+struct  {
+_g_user_motor_current_design_parameter.f_current_omega
+20000164  4  float
+_g_user_motor_current_design_parameter.f_current_zeta
+20000168  4  float
+}
+_g_ioport_ctrl
+200003e0  8  data ,g
+struct  {
+_g_ioport_ctrl.open
+200003e0  4  unsigned long
+_g_ioport_ctrl.p_context
+200003e4  4  [pointer]
+}
+_g_motor_sense_hall0_ctrl
+200008b4  40  data ,g
+struct  {
+_g_motor_sense_hall0_ctrl.open
+200008b4  4  unsigned long
+_g_motor_sense_hall0_ctrl.u1_hall_signal
+200008b8  1  unsigned char
+_g_motor_sense_hall0_ctrl.u1_last_hall_signal
+200008b9  1  unsigned char
+_g_motor_sense_hall0_ctrl.direction
+200008ba  1  enum
+_g_motor_sense_hall0_ctrl.last_direction
+200008bb  1  enum
+_g_motor_sense_hall0_ctrl.u2_carrier_count
+200008bc  2  unsigned short
+_g_motor_sense_hall0_ctrl.u2_hall_period
+200008be  c  unsigned short
+_g_motor_sense_hall0_ctrl.u1_period_counter
+200008ca  1  unsigned char
+_g_motor_sense_hall0_ctrl.f_angle
+200008cc  4  float
+_g_motor_sense_hall0_ctrl.f_angle_per_count
+200008d0  4  float
+_g_motor_sense_hall0_ctrl.f_calculated_speed
+200008d4  4  float
+_g_motor_sense_hall0_ctrl.u1_hall_signal_memory
+200008d8  1  unsigned char
+_g_motor_sense_hall0_ctrl.hall_signal_status
+200008d9  1  enum
+_g_motor_sense_hall0_ctrl.u1_hall_signal_count
+200008da  1  unsigned char
+_g_motor_sense_hall0_ctrl.f4_pseudo_speed_rad
+200008dc  4  float
+_g_motor_sense_hall0_ctrl.f4_add_pseudo_speed_rad
+200008e0  4  float
+_g_motor_sense_hall0_ctrl.u2_startup_carrier_count
+200008e4  2  unsigned short
+_g_motor_sense_hall0_ctrl.st_input
+200008e8  4
+struct  {
+_g_motor_sense_hall0_ctrl.st_input.f4_ref_speed_rad_ctrl
+200008e8  4  float
+}
+_g_motor_sense_hall0_ctrl.u1_startup_flag
+200008ec  1  unsigned char
+_g_motor_sense_hall0_ctrl.p_cfg
+200008f0  4  [pointer]
+}
+_g_timer2_ctrl
+20000894  20  data ,g
+struct  {
+_g_timer2_ctrl.open
+20000894  4  unsigned long
+_g_timer2_ctrl.p_cfg
+20000898  4  [pointer]
+_g_timer2_ctrl.p_reg
+2000089c  4  [pointer]
+_g_timer2_ctrl.channel_mask
+200008a0  4  unsigned long
+_g_timer2_ctrl.variant
+200008a4  1  enum
+_g_timer2_ctrl.p_callback
+200008a8  4  [pointer]
+_g_timer2_ctrl.p_callback_memory
+200008ac  4  [pointer]
+_g_timer2_ctrl.p_context
+200008b0  4  [pointer]
+}
+_g_timer1_ctrl
+20000874  20  data ,g
+struct  {
+_g_timer1_ctrl.open
+20000874  4  unsigned long
+_g_timer1_ctrl.p_cfg
+20000878  4  [pointer]
+_g_timer1_ctrl.p_reg
+2000087c  4  [pointer]
+_g_timer1_ctrl.channel_mask
+20000880  4  unsigned long
+_g_timer1_ctrl.variant
+20000884  1  enum
+_g_timer1_ctrl.p_callback
+20000888  4  [pointer]
+_g_timer1_ctrl.p_callback_memory
+2000088c  4  [pointer]
+_g_timer1_ctrl.p_context
+20000890  4  [pointer]
+}
+_g_timer0_ctrl
+20000854  20  data ,g
+struct  {
+_g_timer0_ctrl.open
+20000854  4  unsigned long
+_g_timer0_ctrl.p_cfg
+20000858  4  [pointer]
+_g_timer0_ctrl.p_reg
+2000085c  4  [pointer]
+_g_timer0_ctrl.channel_mask
+20000860  4  unsigned long
+_g_timer0_ctrl.variant
+20000864  1  enum
+_g_timer0_ctrl.p_callback
+20000868  4  [pointer]
+_g_timer0_ctrl.p_callback_memory
+2000086c  4  [pointer]
+_g_timer0_ctrl.p_context
+20000870  4  [pointer]
+}
+_g_three_phase0_ctrl
+20000838  1c  data ,g
+struct  {
+_g_three_phase0_ctrl.open
+20000838  4  unsigned long
+_g_three_phase0_ctrl.p_reg
+2000083c  c  [pointer]
+_g_three_phase0_ctrl.channel_mask
+20000848  4  unsigned long
+_g_three_phase0_ctrl.buffer_mode
+2000084c  1  enum
+_g_three_phase0_ctrl.p_cfg
+20000850  4  [pointer]
+}
+_g_adc0_ctrl
+20000810  28  data ,g
+struct  {
+_g_adc0_ctrl.adc_state
+20000810  1  enum
+_g_adc0_ctrl.cached_adtrgenr
+20000814  4  unsigned long
+_g_adc0_ctrl.cached_adsystr
+20000818  4  unsigned long
+_g_adc0_ctrl.trigger_disable_wait_cycles
+2000081c  4  unsigned long
+_g_adc0_ctrl.p_cfg
+20000820  4  [pointer]
+_g_adc0_ctrl.p_callback
+20000824  4  [pointer]
+_g_adc0_ctrl.p_callback_memory
+20000828  4  [pointer]
+_g_adc0_ctrl.p_context
+2000082c  4  [pointer]
+_g_adc0_ctrl.initialized
+20000830  4  unsigned long
+_g_adc0_ctrl.opened
+20000834  4  unsigned long
+}
+_g_motor_driver0_ctrl
+20000768  a8  data ,g
+struct  {
+_g_motor_driver0_ctrl.open
+20000768  4  unsigned long
+_g_motor_driver0_ctrl.u2_carrier_base
+2000076c  2  unsigned short
+_g_motor_driver0_ctrl.u2_deadtime_count
+2000076e  2  unsigned short
+_g_motor_driver0_ctrl.f_iu_ad
+20000770  4  float
+_g_motor_driver0_ctrl.f_iv_ad
+20000774  4  float
+_g_motor_driver0_ctrl.f_iw_ad
+20000778  4  float
+_g_motor_driver0_ctrl.f_vdc_ad
+2000077c  4  float
+_g_motor_driver0_ctrl.f_sin_ad
+20000780  4  float
+_g_motor_driver0_ctrl.f_cos_ad
+20000784  4  float
+_g_motor_driver0_ctrl.f_refu
+20000788  4  float
+_g_motor_driver0_ctrl.f_refv
+2000078c  4  float
+_g_motor_driver0_ctrl.f_refw
+20000790  4  float
+_g_motor_driver0_ctrl.u1_flag_offset_calc
+20000794  1  unsigned char
+_g_motor_driver0_ctrl.u2_offset_calc_times
+20000796  2  unsigned short
+_g_motor_driver0_ctrl.f_offset_iu
+20000798  4  float
+_g_motor_driver0_ctrl.f_offset_iv
+2000079c  4  float
+_g_motor_driver0_ctrl.f_offset_iw
+200007a0  4  float
+_g_motor_driver0_ctrl.f_sum_iu_ad
+200007a4  4  float
+_g_motor_driver0_ctrl.f_sum_iv_ad
+200007a8  4  float
+_g_motor_driver0_ctrl.f_sum_iw_ad
+200007ac  4  float
+_g_motor_driver0_ctrl.min_phase
+200007b0  1  enum
+_g_motor_driver0_ctrl.mid_phase
+200007b1  1  enum
+_g_motor_driver0_ctrl.u4_gtioca_low_cfg
+200007b4  4  unsigned long
+_g_motor_driver0_ctrl.u4_gtiocb_low_cfg
+200007b8  4  unsigned long
+_g_motor_driver0_ctrl.u1_flag_port_enable
+200007bc  1  unsigned char
+_g_motor_driver0_ctrl.st_modulation
+200007c0  1c
+struct  {
+_g_motor_driver0_ctrl.st_modulation.f4_vdc
+200007c0  4  float
+_g_motor_driver0_ctrl.st_modulation.f4_1_div_vdc
+200007c4  4  float
+_g_motor_driver0_ctrl.st_modulation.f4_voltage_error_ratio
+200007c8  4  float
+_g_motor_driver0_ctrl.st_modulation.f4_max_duty
+200007cc  4  float
+_g_motor_driver0_ctrl.st_modulation.f4_min_duty
+200007d0  4  float
+_g_motor_driver0_ctrl.st_modulation.f4_neutral_duty
+200007d4  4  float
+_g_motor_driver0_ctrl.st_modulation.u1_sat_flag
+200007d8  1  unsigned char
+}
+_g_motor_driver0_ctrl.p_cfg
+200007dc  4  [pointer]
+_g_motor_driver0_ctrl.adc_callback_args
+200007e0  20
+struct  {
+_g_motor_driver0_ctrl.adc_callback_args.unit
+200007e0  2  unsigned short
+_g_motor_driver0_ctrl.adc_callback_args.event
+200007e2  1  enum
+_g_motor_driver0_ctrl.adc_callback_args.p_context
+200007e4  4  [pointer]
+_g_motor_driver0_ctrl.adc_callback_args.channel
+200007e8  1  enum
+_g_motor_driver0_ctrl.adc_callback_args.group_mask
+200007f8  2  enum
+}
+_g_motor_driver0_ctrl.timer_callback_args
+20000800  c
+struct  {
+_g_motor_driver0_ctrl.timer_callback_args.p_context
+20000800  4  [pointer]
+_g_motor_driver0_ctrl.timer_callback_args.event
+20000804  1  enum
+_g_motor_driver0_ctrl.timer_callback_args.capture
+20000808  4  unsigned long
+}
+_g_motor_driver0_ctrl.p_shared_instance_ctrl
+2000080c  4  [pointer]
+}
+_g_motor_current0_ctrl
+20000648  11c  data ,g
+struct  {
+_g_motor_current0_ctrl.open
+20000648  4  unsigned long
+_g_motor_current0_ctrl.u1_active
+2000064c  1  unsigned char
+_g_motor_current0_ctrl.f_vd_ref
+20000650  4  float
+_g_motor_current0_ctrl.f_vq_ref
+20000654  4  float
+_g_motor_current0_ctrl.f_id_ref
+20000658  4  float
+_g_motor_current0_ctrl.f_iq_ref
+2000065c  4  float
+_g_motor_current0_ctrl.f_iu_ad
+20000660  4  float
+_g_motor_current0_ctrl.f_iv_ad
+20000664  4  float
+_g_motor_current0_ctrl.f_iw_ad
+20000668  4  float
+_g_motor_current0_ctrl.f_id_ad
+2000066c  4  float
+_g_motor_current0_ctrl.f_iq_ad
+20000670  4  float
+_g_motor_current0_ctrl.f_vdc_ad
+20000674  4  float
+_g_motor_current0_ctrl.f_speed_rad
+20000678  4  float
+_g_motor_current0_ctrl.f_rotor_angle
+2000067c  4  float
+_g_motor_current0_ctrl.f_position_rad
+20000680  4  float
+_g_motor_current0_ctrl.f_refu
+20000684  4  float
+_g_motor_current0_ctrl.f_refv
+20000688  4  float
+_g_motor_current0_ctrl.f_refw
+2000068c  4  float
+_g_motor_current0_ctrl.f_va_max
+20000690  4  float
+_g_motor_current0_ctrl.f_ed
+20000694  4  float
+_g_motor_current0_ctrl.f_eq
+20000698  4  float
+_g_motor_current0_ctrl.f_phase_err
+2000069c  4  float
+_g_motor_current0_ctrl.u1_flag_crnt_offset
+200006a0  1  unsigned char
+_g_motor_current0_ctrl.f_sin_ad_data
+200006a4  4  float
+_g_motor_current0_ctrl.f_cos_ad_data
+200006a8  4  float
+_g_motor_current0_ctrl.p_cfg
+200006ac  4  [pointer]
+_g_motor_current0_ctrl.st_pi_id
+200006b0  14
+struct  {
+_g_motor_current0_ctrl.st_pi_id.f_err
+200006b0  4  float
+_g_motor_current0_ctrl.st_pi_id.f_kp
+200006b4  4  float
+_g_motor_current0_ctrl.st_pi_id.f_ki
+200006b8  4  float
+_g_motor_current0_ctrl.st_pi_id.f_refi
+200006bc  4  float
+_g_motor_current0_ctrl.st_pi_id.f_ilimit
+200006c0  4  float
+}
+_g_motor_current0_ctrl.st_pi_iq
+200006c4  14
+struct  {
+_g_motor_current0_ctrl.st_pi_iq.f_err
+200006c4  4  float
+_g_motor_current0_ctrl.st_pi_iq.f_kp
+200006c8  4  float
+_g_motor_current0_ctrl.st_pi_iq.f_ki
+200006cc  4  float
+_g_motor_current0_ctrl.st_pi_iq.f_refi
+200006d0  4  float
+_g_motor_current0_ctrl.st_pi_iq.f_ilimit
+200006d4  4  float
+}
+_g_motor_current0_ctrl.st_vcomp
+200006d8  70
+struct  {
+_g_motor_current0_ctrl.st_vcomp.f_comp_v
+200006d8  14  float
+_g_motor_current0_ctrl.st_vcomp.f_comp_i
+200006ec  14  float
+_g_motor_current0_ctrl.st_vcomp.f_slope
+20000700  18  float
+_g_motor_current0_ctrl.st_vcomp.f_intcept
+20000718  18  float
+_g_motor_current0_ctrl.st_vcomp.f_volt_comp_array
+20000730  c  float
+_g_motor_current0_ctrl.st_vcomp.f_vdc
+2000073c  4  float
+_g_motor_current0_ctrl.st_vcomp.f_volt_comp_limit
+20000740  4  float
+_g_motor_current0_ctrl.st_vcomp.u1_volt_err_comp_enable
+20000744  1  enum
+}
+_g_motor_current0_ctrl.st_input
+20000748  14
+struct  {
+_g_motor_current0_ctrl.st_input.f_id_ref
+20000748  4  float
+_g_motor_current0_ctrl.st_input.f_iq_ref
+2000074c  4  float
+_g_motor_current0_ctrl.st_input.f_ref_speed_rad_ctrl
+20000750  4  float
+_g_motor_current0_ctrl.st_input.f_damp_comp_speed
+20000754  4  float
+_g_motor_current0_ctrl.st_input.u1_flag_pi
+20000758  1  unsigned char
+}
+_g_motor_current0_ctrl.p_angle_instance
+2000075c  4  [pointer]
+_g_motor_current0_ctrl.p_driver_instance
+20000760  4  [pointer]
+}
+_g_timer3_ctrl
+20000628  20  data ,g
+struct  {
+_g_timer3_ctrl.open
+20000628  4  unsigned long
+_g_timer3_ctrl.p_cfg
+2000062c  4  [pointer]
+_g_timer3_ctrl.p_reg
+20000630  4  [pointer]
+_g_timer3_ctrl.is_agtw
+20000634  1  _Bool
+_g_timer3_ctrl.period
+20000638  4  unsigned long
+_g_timer3_ctrl.p_callback
+2000063c  4  [pointer]
+_g_timer3_ctrl.p_callback_memory
+20000640  4  [pointer]
+_g_timer3_ctrl.p_context
+20000644  4  [pointer]
+}
+_g_motor_speed0_ctrl
+2000049c  18c  data ,g
+struct  {
+_g_motor_speed0_ctrl.open
+2000049c  4  unsigned long
+_g_motor_speed0_ctrl.u1_active
+200004a0  1  unsigned char
+_g_motor_speed0_ctrl.u1_state_speed_ref
+200004a1  1  unsigned char
+_g_motor_speed0_ctrl.u1_flag_get_iref
+200004a2  1  unsigned char
+_g_motor_speed0_ctrl.u1_state_id_ref
+200004a3  1  unsigned char
+_g_motor_speed0_ctrl.u1_state_iq_ref
+200004a4  1  unsigned char
+_g_motor_speed0_ctrl.f_id_ref
+200004a8  4  float
+_g_motor_speed0_ctrl.f_iq_ref
+200004ac  4  float
+_g_motor_speed0_ctrl.f_rpm2rad
+200004b0  4  float
+_g_motor_speed0_ctrl.f_ref_speed_rad_ctrl
+200004b4  4  float
+_g_motor_speed0_ctrl.f_ref_speed_rad
+200004b8  4  float
+_g_motor_speed0_ctrl.f_speed_lpf_rad
+200004bc  4  float
+_g_motor_speed0_ctrl.e_status
+200004c0  1  enum
+_g_motor_speed0_ctrl.u1_flag_down_to_ol
+200004c1  1  unsigned char
+_g_motor_speed0_ctrl.f_ol_iq_down_step
+200004c4  4  float
+_g_motor_speed0_ctrl.f_phase_err_rad_lpf
+200004c8  4  float
+_g_motor_speed0_ctrl.f_init_phase_err_rad
+200004cc  4  float
+_g_motor_speed0_ctrl.f_opl_torque_current
+200004d0  4  float
+_g_motor_speed0_ctrl.f_damp_comp_speed
+200004d4  4  float
+_g_motor_speed0_ctrl.f_damp_comp_gain
+200004d8  4  float
+_g_motor_speed0_ctrl.f_fb_speed_limit_rate
+200004dc  4  float
+_g_motor_speed0_ctrl.u1_enable_flux_weakning
+200004e0  1  unsigned char
+_g_motor_speed0_ctrl.st_flxwkn
+200004e4  20
+struct  {
+_g_motor_speed0_ctrl.st_flxwkn.pmotor
+200004e4  4  [pointer]
+_g_motor_speed0_ctrl.st_flxwkn.f4_ia_max
+200004e8  4  float
+_g_motor_speed0_ctrl.st_flxwkn.f4_va_max
+200004ec  4  float
+_g_motor_speed0_ctrl.st_flxwkn.f4_vfw_ratio
+200004f0  4  float
+_g_motor_speed0_ctrl.st_flxwkn.f4_id_demag
+200004f4  4  float
+_g_motor_speed0_ctrl.st_flxwkn.f4_id_min
+200004f8  4  float
+_g_motor_speed0_ctrl.st_flxwkn.f4_v_fw
+200004fc  4  float
+_g_motor_speed0_ctrl.st_flxwkn.u2_fw_status
+20000500  2  unsigned short
+}
+_g_motor_speed0_ctrl.p_cfg
+20000504  4  [pointer]
+_g_motor_speed0_ctrl.pi_param
+20000508  14
+struct  {
+_g_motor_speed0_ctrl.pi_param.f_err
+20000508  4  float
+_g_motor_speed0_ctrl.pi_param.f_kp
+2000050c  4  float
+_g_motor_speed0_ctrl.pi_param.f_ki
+20000510  4  float
+_g_motor_speed0_ctrl.pi_param.f_refi
+20000514  4  float
+_g_motor_speed0_ctrl.pi_param.f_ilimit
+20000518  4  float
+}
+_g_motor_speed0_ctrl.st_input
+2000051c  30
+struct  {
+_g_motor_speed0_ctrl.st_input.f_id
+2000051c  4  float
+_g_motor_speed0_ctrl.st_input.f_iq
+20000520  4  float
+_g_motor_speed0_ctrl.st_input.f_vamax
+20000524  4  float
+_g_motor_speed0_ctrl.st_input.f_speed_rad
+20000528  4  float
+_g_motor_speed0_ctrl.st_input.f_position_rad
+2000052c  4  float
+_g_motor_speed0_ctrl.st_input.f_ed
+20000530  4  float
+_g_motor_speed0_ctrl.st_input.f_eq
+20000534  4  float
+_g_motor_speed0_ctrl.st_input.f_phase_err_rad
+20000538  4  float
+_g_motor_speed0_ctrl.st_input.u1_flag_get_iref
+2000053c  1  unsigned char
+_g_motor_speed0_ctrl.st_input.u1_adjust_status
+2000053d  1  unsigned char
+_g_motor_speed0_ctrl.st_input.u1_adjust_mode
+2000053e  1  unsigned char
+_g_motor_speed0_ctrl.st_input.u1_adjust_count_full
+2000053f  1  unsigned char
+_g_motor_speed0_ctrl.st_input.u1_openloop_status
+20000540  1  unsigned char
+_g_motor_speed0_ctrl.st_input.f_openloop_speed
+20000544  4  float
+_g_motor_speed0_ctrl.st_input.f_openloop_id_ref
+20000548  4  float
+}
+_g_motor_speed0_ctrl.st_speed_lpf
+2000054c  14
+struct  {
+_g_motor_speed0_ctrl.st_speed_lpf.f_pre_output
+2000054c  4  float
+_g_motor_speed0_ctrl.st_speed_lpf.f_pre_input
+20000550  4  float
+_g_motor_speed0_ctrl.st_speed_lpf.f_omega_t
+20000554  4  float
+_g_motor_speed0_ctrl.st_speed_lpf.f_gain_ka
+20000558  4  float
+_g_motor_speed0_ctrl.st_speed_lpf.f_gain_kb
+2000055c  4  float
+}
+_g_motor_speed0_ctrl.st_phase_err_lpf
+20000560  14
+struct  {
+_g_motor_speed0_ctrl.st_phase_err_lpf.f_pre_output
+20000560  4  float
+_g_motor_speed0_ctrl.st_phase_err_lpf.f_pre_input
+20000564  4  float
+_g_motor_speed0_ctrl.st_phase_err_lpf.f_omega_t
+20000568  4  float
+_g_motor_speed0_ctrl.st_phase_err_lpf.f_gain_ka
+2000056c  4  float
+_g_motor_speed0_ctrl.st_phase_err_lpf.f_gain_kb
+20000570  4  float
+}
+_g_motor_speed0_ctrl.st_observer
+20000574  5c
+struct  {
+_g_motor_speed0_ctrl.st_observer.f4_speed_rad
+20000574  4  float
+_g_motor_speed0_ctrl.st_observer.f4_ref_torque
+20000578  4  float
+_g_motor_speed0_ctrl.st_observer.f4_ref_pre_torque
+2000057c  4  float
+_g_motor_speed0_ctrl.st_observer.f4_ref_speed_rad
+20000580  4  float
+_g_motor_speed0_ctrl.st_observer.f4_ref_pre_speed_rad
+20000584  4  float
+_g_motor_speed0_ctrl.st_observer.f4_hpf_k1
+20000588  4  float
+_g_motor_speed0_ctrl.st_observer.f4_hpf_k2
+2000058c  4  float
+_g_motor_speed0_ctrl.st_observer.f4_hpf_k3
+20000590  4  float
+_g_motor_speed0_ctrl.st_observer.f4_k1
+20000594  4  float
+_g_motor_speed0_ctrl.st_observer.f4_k2
+20000598  4  float
+_g_motor_speed0_ctrl.st_observer.f4_hpf_ref_speed_rad
+2000059c  4  float
+_g_motor_speed0_ctrl.st_observer.f4_hpf_ref_pre_speed_rad
+200005a0  4  float
+_g_motor_speed0_ctrl.st_observer.f4_hpf_omega
+200005a4  4  float
+_g_motor_speed0_ctrl.st_observer.st_lpf
+200005a8  28
+struct  {
+_g_motor_speed0_ctrl.st_observer.st_lpf.f4_pre_output
+200005a8  4  float
+_g_motor_speed0_ctrl.st_observer.st_lpf.f4_pre2_output
+200005ac  4  float
+_g_motor_speed0_ctrl.st_observer.st_lpf.f4_pre_input
+200005b0  4  float
+_g_motor_speed0_ctrl.st_observer.st_lpf.f4_pre2_input
+200005b4  4  float
+_g_motor_speed0_ctrl.st_observer.st_lpf.f4_omega_t
+200005b8  4  float
+_g_motor_speed0_ctrl.st_observer.st_lpf.f4_omega2_t
+200005bc  4  float
+_g_motor_speed0_ctrl.st_observer.st_lpf.f4_omega2_t2
+200005c0  4  float
+_g_motor_speed0_ctrl.st_observer.st_lpf.f4_gain_ka
+200005c4  4  float
+_g_motor_speed0_ctrl.st_observer.st_lpf.f4_gain_kb
+200005c8  4  float
+_g_motor_speed0_ctrl.st_observer.st_lpf.f4_gain_kc
+200005cc  4  float
+}
+}
+_g_motor_speed0_ctrl.st_disturbance_observer
+200005d0  2c
+struct  {
+_g_motor_speed0_ctrl.st_disturbance_observer.f4_gain_distubance_estimate
+200005d0  4  float
+_g_motor_speed0_ctrl.st_disturbance_observer.f4_gain_speed_estimate
+200005d4  4  float
+_g_motor_speed0_ctrl.st_disturbance_observer.f4_estimated_distubance
+200005d8  4  float
+_g_motor_speed0_ctrl.st_disturbance_observer.f4_estimated_speed
+200005dc  4  float
+_g_motor_speed0_ctrl.st_disturbance_observer.f4_inertia
+200005e0  4  float
+_g_motor_speed0_ctrl.st_disturbance_observer.f4_ctrl_period
+200005e4  4  float
+_g_motor_speed0_ctrl.st_disturbance_observer.st_lpf
+200005e8  14
+struct  {
+_g_motor_speed0_ctrl.st_disturbance_observer.st_lpf.f_pre_output
+200005e8  4  float
+_g_motor_speed0_ctrl.st_disturbance_observer.st_lpf.f_pre_input
+200005ec  4  float
+_g_motor_speed0_ctrl.st_disturbance_observer.st_lpf.f_omega_t
+200005f0  4  float
+_g_motor_speed0_ctrl.st_disturbance_observer.st_lpf.f_gain_ka
+200005f4  4  float
+_g_motor_speed0_ctrl.st_disturbance_observer.st_lpf.f_gain_kb
+200005f8  4  float
+}
+}
+_g_motor_speed0_ctrl.openloop_sub
+200005fc  1c
+struct  {
+_g_motor_speed0_ctrl.openloop_sub.st_ed_lpf
+200005fc  14
+struct  {
+_g_motor_speed0_ctrl.openloop_sub.st_ed_lpf.f_pre_output
+200005fc  4  float
+_g_motor_speed0_ctrl.openloop_sub.st_ed_lpf.f_pre_input
+20000600  4  float
+_g_motor_speed0_ctrl.openloop_sub.st_ed_lpf.f_omega_t
+20000604  4  float
+_g_motor_speed0_ctrl.openloop_sub.st_ed_lpf.f_gain_ka
+20000608  4  float
+_g_motor_speed0_ctrl.openloop_sub.st_ed_lpf.f_gain_kb
+2000060c  4  float
+}
+_g_motor_speed0_ctrl.openloop_sub.f_damp_comp_gain
+20000610  4  float
+_g_motor_speed0_ctrl.openloop_sub.f_fb_speed_limit_rate
+20000614  4  float
+}
+_g_motor_speed0_ctrl.st_position_data
+20000618  4
+struct  {
+_g_motor_speed0_ctrl.st_position_data.e_step_mode
+20000618  1  enum
+_g_motor_speed0_ctrl.st_position_data.e_loop_mode
+20000619  1  enum
+_g_motor_speed0_ctrl.st_position_data.position_reference_degree
+2000061a  2  short
+}
+_g_motor_speed0_ctrl.timer_args
+2000061c  c
+struct  {
+_g_motor_speed0_ctrl.timer_args.p_context
+2000061c  4  [pointer]
+_g_motor_speed0_ctrl.timer_args.event
+20000620  1  enum
+_g_motor_speed0_ctrl.timer_args.capture
+20000624  4  unsigned long
+}
+}
+_g_motor_hall0_ctrl
+20000400  9c  data ,g
+struct  {
+_g_motor_hall0_ctrl.open
+20000400  4  unsigned long
+_g_motor_hall0_ctrl.u2_error_info
+20000404  2  unsigned short
+_g_motor_hall0_ctrl.st_statem
+20000406  6
+struct  {
+_g_motor_hall0_ctrl.st_statem.status
+20000406  1  enum
+_g_motor_hall0_ctrl.st_statem.next_status
+20000407  1  enum
+_g_motor_hall0_ctrl.st_statem.current_event
+20000408  1  enum
+_g_motor_hall0_ctrl.st_statem.u2_error_status
+2000040a  2  unsigned short
+}
+_g_motor_hall0_ctrl.st_speed_input
+2000040c  30
+struct  {
+_g_motor_hall0_ctrl.st_speed_input.f_id
+2000040c  4  float
+_g_motor_hall0_ctrl.st_speed_input.f_iq
+20000410  4  float
+_g_motor_hall0_ctrl.st_speed_input.f_vamax
+20000414  4  float
+_g_motor_hall0_ctrl.st_speed_input.f_speed_rad
+20000418  4  float
+_g_motor_hall0_ctrl.st_speed_input.f_position_rad
+2000041c  4  float
+_g_motor_hall0_ctrl.st_speed_input.f_ed
+20000420  4  float
+_g_motor_hall0_ctrl.st_speed_input.f_eq
+20000424  4  float
+_g_motor_hall0_ctrl.st_speed_input.f_phase_err_rad
+20000428  4  float
+_g_motor_hall0_ctrl.st_speed_input.u1_flag_get_iref
+2000042c  1  unsigned char
+_g_motor_hall0_ctrl.st_speed_input.u1_adjust_status
+2000042d  1  unsigned char
+_g_motor_hall0_ctrl.st_speed_input.u1_adjust_mode
+2000042e  1  unsigned char
+_g_motor_hall0_ctrl.st_speed_input.u1_adjust_count_full
+2000042f  1  unsigned char
+_g_motor_hall0_ctrl.st_speed_input.u1_openloop_status
+20000430  1  unsigned char
+_g_motor_hall0_ctrl.st_speed_input.f_openloop_speed
+20000434  4  float
+_g_motor_hall0_ctrl.st_speed_input.f_openloop_id_ref
+20000438  4  float
+}
+_g_motor_hall0_ctrl.st_speed_output
+2000043c  14
+struct  {
+_g_motor_hall0_ctrl.st_speed_output.f_id_ref
+2000043c  4  float
+_g_motor_hall0_ctrl.st_speed_output.f_iq_ref
+20000440  4  float
+_g_motor_hall0_ctrl.st_speed_output.f_ref_speed_rad_ctrl
+20000444  4  float
+_g_motor_hall0_ctrl.st_speed_output.f_damp_comp_speed
+20000448  4  float
+_g_motor_hall0_ctrl.st_speed_output.u1_flag_pi
+2000044c  1  unsigned char
+}
+_g_motor_hall0_ctrl.st_current_input
+20000450  14
+struct  {
+_g_motor_hall0_ctrl.st_current_input.f_id_ref
+20000450  4  float
+_g_motor_hall0_ctrl.st_current_input.f_iq_ref
+20000454  4  float
+_g_motor_hall0_ctrl.st_current_input.f_ref_speed_rad_ctrl
+20000458  4  float
+_g_motor_hall0_ctrl.st_current_input.f_damp_comp_speed
+2000045c  4  float
+_g_motor_hall0_ctrl.st_current_input.u1_flag_pi
+20000460  1  unsigned char
+}
+_g_motor_hall0_ctrl.st_current_output
+20000464  34
+struct  {
+_g_motor_hall0_ctrl.st_current_output.f_id
+20000464  4  float
+_g_motor_hall0_ctrl.st_current_output.f_iq
+20000468  4  float
+_g_motor_hall0_ctrl.st_current_output.f_vamax
+2000046c  4  float
+_g_motor_hall0_ctrl.st_current_output.f_speed_rad
+20000470  4  float
+_g_motor_hall0_ctrl.st_current_output.f_speed_rpm
+20000474  4  float
+_g_motor_hall0_ctrl.st_current_output.f_rotor_angle
+20000478  4  float
+_g_motor_hall0_ctrl.st_current_output.f_position_rad
+2000047c  4  float
+_g_motor_hall0_ctrl.st_current_output.f_ed
+20000480  4  float
+_g_motor_hall0_ctrl.st_current_output.f_eq
+20000484  4  float
+_g_motor_hall0_ctrl.st_current_output.f_phase_err_rad
+20000488  4  float
+_g_motor_hall0_ctrl.st_current_output.u1_flag_get_iref
+2000048c  1  unsigned char
+_g_motor_hall0_ctrl.st_current_output.u1_adjust_status
+2000048d  1  unsigned char
+_g_motor_hall0_ctrl.st_current_output.u1_adjust_count_full
+2000048e  1  unsigned char
+_g_motor_hall0_ctrl.st_current_output.u1_openloop_status
+2000048f  1  unsigned char
+_g_motor_hall0_ctrl.st_current_output.f_openloop_speed
+20000490  4  float
+_g_motor_hall0_ctrl.st_current_output.f_openloop_id_ref
+20000494  4  float
+}
+_g_motor_hall0_ctrl.p_cfg
+20000498  4  [pointer]
+}
+_g_poeg0_ctrl
+200003e8  18  data ,g
+struct  {
+_g_poeg0_ctrl.open
+200003e8  4  unsigned long
+_g_poeg0_ctrl.p_cfg
+200003ec  4  [pointer]
+_g_poeg0_ctrl.p_reg
+200003f0  4  [pointer]
+_g_poeg0_ctrl.p_callback
+200003f4  4  [pointer]
+_g_poeg0_ctrl.p_callback_memory
+200003f8  4  [pointer]
+_g_poeg0_ctrl.p_context
+200003fc  4  [pointer]
+}
+_g_motor_current0_design
+20000018  8  data ,g
+struct  {
+_g_motor_current0_design.f_current_omega
+20000018  4  float
+_g_motor_current0_design.f_current_zeta
+2000001c  4  float
+}
+_g_motor_current0_motor
+20000000  18  data ,g
+struct  {
+_g_motor_current0_motor.u2_mtr_pp
+20000000  2  unsigned short
+_g_motor_current0_motor.f4_mtr_r
+20000004  4  float
+_g_motor_current0_motor.f4_mtr_ld
+20000008  4  float
+_g_motor_current0_motor.f4_mtr_lq
+2000000c  4  float
+_g_motor_current0_motor.f4_mtr_m
+20000010  4  float
+_g_motor_current0_motor.f4_mtr_j
+20000014  4  float
+}
+_g_bsp_group_irq_sources
+200008fc  40  data ,g
+_g_protect_pfswe_counter
+2000093c  4  data ,g
+_gp_renesas_isr_context
+20000940  180  data ,g
+_g_protect_counters
+20000ac0  8  data ,g
+_SystemCoreClock
+20000ac8  4  data ,g
+_scope_ch_type
+20008b50  8  data ,g
+_scope_run_state
+20008b64  4  data ,g
+_scope_sampling
+20008b68  4  data ,g
+_scope_data_index
+20008b5c  4  data ,g
+_scope_data_ref
+20000020  4  data ,g
+_scope_pre_count
+20008b60  4  data ,g
+_scope_pre_ref
+20000024  4  data ,g
+_scope_trig_chan
+20008b6c  4  data ,g
+_scope_trig_edge
+20008b74  4  data ,g
+_scope_trig_mode
+20008b7c  4  data ,g
+_scope_data_count
+20008b58  4  data ,g
+_scope_auto_count
+20008b4c  4  data ,g
