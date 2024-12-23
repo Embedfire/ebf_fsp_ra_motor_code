@@ -50,6 +50,16 @@ void Motor_Control_Reverse(void)
     STEP_DIRECTION_TOGGLE;      // 切换电机方向控制引脚
 }
 
+/**
+ * @brief  控制电机速度
+ * @param[in] speed_hz 目标速度，单位：Hz
+ * @retval 无
+ */
+void Motor_Control_SetSpeed(uint32_t speed_hz)
+{
+    // 使用 R_GPT_PeriodSet 来设置定时器周期，从而控制 PWM 输出频率
+    R_GPT_PeriodSet(&step_pwm_ctrl, Hz_Set(speed_hz));
+}
 
 
 /**
@@ -67,27 +77,28 @@ void motor_pid_control(float actual_location)
   /* 当电机运动时才启动pid计算 */
   if(motor_state == true )
   {
-    /* 单位时间内的编码器脉冲数作为实际值传入pid控制器 */
-    cont_val = PID_realize(actual_location);// 进行 PID 计算
+    /* 将实际位置作为输入传入PID控制器进行计算 */
+    cont_val = PID_realize((float)actual_location); // 进行 PID 计算
 
+    // 根据计算结果控制步进电机的旋转方向
     if (cont_val > 0)
     {
-        STEP_CW;
+        STEP_CW;  // 顺时针旋转
     }
     else
     {
-        STEP_CCW;
-        cont_val = -cont_val;
-
+        STEP_CCW; // 逆时针旋转
+        cont_val = -cont_val; // 取绝对值
     }
 
+    // 控制值上限处理
     cont_val >= PWM_MAX_FREQUENCY ? (cont_val = PWM_MAX_FREQUENCY) : cont_val;
 
-    err = R_GPT_PeriodSet(&step_pwm_ctrl, Hz_Set((uint32_t)cont_val));
-    assert(FSP_SUCCESS == err);
+    // 设置步进电机速度
+    Motor_Control_SetSpeed((uint32_t)cont_val);
 
-    set_computer_value(SEND_FACT_CMD, CURVES_CH1, &location, 1);  // 给通道 1 发送实际值
-
+    // 给通道 1 发送实际位置值
+    set_computer_value(SEND_FACT_CMD, CURVES_CH1, &location, 1);
   }
 }
 

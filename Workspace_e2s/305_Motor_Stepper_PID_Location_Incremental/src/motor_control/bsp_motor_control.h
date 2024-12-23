@@ -39,6 +39,6 @@ void Motor_Control_Init(void);
 void Motor_Control_Start(void);
 void Motor_Control_Stop(void);
 void Motor_Control_Reverse(void);
-void Motor_Control_SetSpeed(uint32_t pwm_frequency);
+void Motor_Control_SetSpeed(uint32_t speed_hz);
 void motor_pid_control(float actual_location);
 #endif /* BSP_MOTOR_CONTROL_H */

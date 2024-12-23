@@ -2,7 +2,7 @@
 <launchConfiguration type="com.renesas.cdt.launch.dsf.gdbremote.launchConfigurationType">
     <booleanAttribute key=".setStepMode" value="false"/>
     <intAttribute key="com.renesas.cdt.core.connectionTimeout" value="30"/>
-    <stringAttribute key="com.renesas.cdt.core.imageFileName" value="${workspace_loc:\304_Motor_Stepper_PID_Location_Positional\Debug/304_Motor_Stepper_PID_Location_Positional.elf}"/>
+    <stringAttribute key="com.renesas.cdt.core.imageFileName" value="${workspace_loc:\306_Motor_Stepper_PID_Two_Ring\Debug/306_Motor_Stepper_PID_Two_Ring.elf}"/>
     <stringAttribute key="com.renesas.cdt.core.initCommands" value=""/>
     <stringAttribute key="com.renesas.cdt.core.ipAddress" value="localhost"/>
     <stringAttribute key="com.renesas.cdt.core.jtagDeviceId" value="com.renesas.hardwaredebug.rz.jlink"/>
@@ -73,8 +73,8 @@
     <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.useProjBinaryForSymbols" value="true"/>
     <stringAttribute key="org.eclipse.cdt.dsf.gdb.DEBUG_NAME" value="arm-none-eabi-gdb"/>
     <booleanAttribute key="org.eclipse.cdt.dsf.gdb.NON_STOP" value="true"/>
-    <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug/304_Motor_Stepper_PID_Location_Positional.elf"/>
-    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="304_Motor_Stepper_PID_Location_Positional"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug/306_Motor_Stepper_PID_Two_Ring.elf"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="306_Motor_Stepper_PID_Two_Ring"/>
     <stringAttribute key="org.eclipse.dsf.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&lt;memoryBlockExpressionList context=&quot;reserved-for-future-use&quot;/&gt;"/>
     <stringAttribute key="process_factory_id" value="org.eclipse.cdt.dsf.gdb.GdbProcessFactory"/>
 </launchConfiguration>

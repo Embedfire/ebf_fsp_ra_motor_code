@@ -35,10 +35,12 @@
 #define TARGET_SPR        (float)(ENCODER_TOTAL_RESOLUTION/40)//定时器单位时间内（25ms）电机 1转/秒 应捕获的脉冲
 #define PWM_MAX_FREQUENCY    19200  //步进电机所能承受的接近最大频率
 
+#define SPEED_MAX_TARGET    TARGET_SPR*3  //步进电机速度最大目标
+
 void Motor_Control_Init(void);
 void Motor_Control_Start(void);
 void Motor_Control_Stop(void);
 void Motor_Control_Reverse(void);
-void Motor_Control_SetSpeed(uint32_t speed_hz);
-void motor_pid_control(float actual_location);
+void Motor_Control_SetSpeed(uint32_t pwm_frequency);
+void motor_pid_control(float actual_location,float actual_speed);
 #endif /* BSP_MOTOR_CONTROL_H */

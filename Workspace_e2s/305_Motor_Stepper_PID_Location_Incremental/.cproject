@@ -421,16 +421,9 @@
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="200_Motor_Stepper_GPIO_Control.com.renesas.cdt.managedbuild.gnuarm.target.elf.411633013" name="可执行文件" projectType="com.renesas.cdt.managedbuild.gnuarm.target.elf"/>
 	</storageModule>
-	<storageModule moduleId="scannerConfiguration">
-		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="com.renesas.cdt.managedbuild.gnuarm.config.elf.debug.1728197685;com.renesas.cdt.managedbuild.gnuarm.config.elf.debug.1728197685.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.469478878;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.994724987">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="com.renesas.cdt.managedbuild.gnuarm.config.elf.release.1216499026;com.renesas.cdt.managedbuild.gnuarm.config.elf.release.1216499026.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.854997393;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.605594588">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="refreshScope"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="scannerConfiguration"/>
+	<storageModule moduleId="org.eclipse.cdt.core.pathentry"/>
 </cproject>

@@ -40,6 +40,7 @@ void PID_param_init()
 void set_pid_target(float temp_val)
 {
   pid.target_val = temp_val;    // 设置当前的目标值
+
 }
 
 /**
