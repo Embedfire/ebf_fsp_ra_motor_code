@@ -10,7 +10,6 @@ int8_t motor_pwm_duty = 50;        // 电机PWM占空比，初始值为50。
 _Bool motor_dir;                   // 电机方向，0表示正向，1表示反向。
 _Bool motor_state = false;
 extern volatile uint32_t pulse_period;   // 脉冲数
-extern volatile _Bool flag;           // 方向标志，true 为正转，false 为反转
 
 /*电机初始化*/
 void Motor_Control_Init(void)
@@ -143,8 +142,6 @@ void gpt0_timing_callback(timer_callback_args_t *p_args)
 
     if (TIMER_EVENT_CYCLE_END == p_args->event)  // 检查定时器周期结束事件
     {
-        if (pulse_period > 0 && pulse_period != last_pulse_period)  // 如果当前脉冲周期有效且与上一次不同
-        {
             // 更新最近的脉冲周期
             new_period = (pulse_period - last_pulse_period);
 
@@ -153,10 +150,9 @@ void gpt0_timing_callback(timer_callback_args_t *p_args)
 
             // 调用PID控制函数调整电机状态
             motor_pid_control(shaft_speed);
-        }
 
-        // 更新脉冲周期
-        last_pulse_period = pulse_period;
+            // 更新脉冲周期
+            last_pulse_period = pulse_period;
     }
 }
 

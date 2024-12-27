@@ -37,7 +37,7 @@ void PID_param_init()
     speed_pid.Kd = 0.1f;
 
     float speed_pid_temp[3] = {speed_pid.Kp, speed_pid.Ki, speed_pid.Kd};
-    set_computer_value(SEND_P_I_D_CMD, CURVES_CH2, speed_pid_temp, 3);// 给通道 1 发送 P I D 值
+    set_computer_value(SEND_P_I_D_CMD, CURVES_CH2, speed_pid_temp, 3);// 给通道 2 发送 P I D 值
 }
 
 

@@ -11,7 +11,7 @@
 
 
 
-#define PWM_PERIOD_COUNT     (0x2dc6c0)
+#define PWM_PERIOD_COUNT     (0x2ee0)
 
 /* 最大比较值 */
 #define PWM_MAX_PERIOD_COUNT              (PWM_PERIOD_COUNT - 100)

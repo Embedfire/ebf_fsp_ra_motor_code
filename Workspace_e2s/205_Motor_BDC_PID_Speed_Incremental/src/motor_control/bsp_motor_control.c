@@ -142,8 +142,6 @@ void gpt0_timing_callback(timer_callback_args_t *p_args)
 
     if (TIMER_EVENT_CYCLE_END == p_args->event)
     {
-        if (pulse_period > 0 && pulse_period != last_pulse_period)
-        {
             // 更新最近速度
             new_period = (pulse_period - last_pulse_period);
 
@@ -152,7 +150,6 @@ void gpt0_timing_callback(timer_callback_args_t *p_args)
 
             motor_pid_control(shaft_speed);
 
-       }
-        last_pulse_period = pulse_period; // 更新目前脉冲周期
+            last_pulse_period = pulse_period; // 更新目前脉冲周期
     }
 }
