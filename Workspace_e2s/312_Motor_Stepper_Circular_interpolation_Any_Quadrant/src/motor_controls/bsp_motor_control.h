@@ -41,7 +41,7 @@
 #define FSPR                 (360.0f / STEP_ANGLE)       // 电机一圈所需步数（无细分）
 
 #define MICRO_STEP           32                          // 细分数
-#define SPR                  ((uint32_t)(FSPR * MICRO_STEP))  // 细分后电机一圈所需脉冲数
+#define SPR                  ((int32_t)(FSPR * MICRO_STEP))  // 细分后电机一圈所需脉冲数
 #define QUARTER_SPR          (SPR / 4)                   // 细分后四分之一圈所需脉冲数
 
 /* 步进电机 PWM 参数 */

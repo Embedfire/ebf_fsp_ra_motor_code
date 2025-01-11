@@ -280,8 +280,8 @@ FSP Configuration
       Output: Custom Waveform: GTIOB: Initial Output Level: Pin Level Low
       Output: Custom Waveform: GTIOB: Cycle End Output Level: Pin Level Toggle
       Output: Custom Waveform: GTIOB: Compare Match Output Level: Pin Level Low
-      Output: Custom Waveform: GTIOB: Retain Output Level at Count Stop: Enabled
-      Output: Custom Waveform: Custom Waveform Enable: Enabled
+      Output: Custom Waveform: GTIOB: Retain Output Level at Count Stop: Disabled
+      Output: Custom Waveform: Custom Waveform Enable: Disabled
       Output: Duty Cycle Percent (only applicable in PWM mode): 50
       Output: GTIOCA Output Enabled: False
       Output: GTIOCA Stop Level: Pin Level Low
@@ -297,9 +297,9 @@ FSP Configuration
       Input: Noise Filter A Sampling Clock Select: No Filter
       Input: Noise Filter B Sampling Clock Select: No Filter
       Interrupts: Callback: x_y_step_callback
-      Interrupts: Overflow/Crest Interrupt Priority: Disabled
+      Interrupts: Overflow/Crest Interrupt Priority: Priority 11
       Interrupts: Capture/Compare match A Interrupt Priority: Disabled
-      Interrupts: Capture/Compare match B Interrupt Priority: Priority 11
+      Interrupts: Capture/Compare match B Interrupt Priority: Disabled
       Interrupts: Underflow/Trough Interrupt Priority: Disabled
       Extra Features: Extra Features: Disabled
       Extra Features: Output Disable: POEG Link: POEG Channel 0
@@ -333,7 +333,7 @@ FSP Configuration
       Output: Custom Waveform: GTIOB: Cycle End Output Level: Pin Level Toggle
       Output: Custom Waveform: GTIOB: Compare Match Output Level: Pin Level Low
       Output: Custom Waveform: GTIOB: Retain Output Level at Count Stop: Enabled
-      Output: Custom Waveform: Custom Waveform Enable: Enabled
+      Output: Custom Waveform: Custom Waveform Enable: Disabled
       Output: Duty Cycle Percent (only applicable in PWM mode): 50
       Output: GTIOCA Output Enabled: False
       Output: GTIOCA Stop Level: Pin Level Low
@@ -349,9 +349,9 @@ FSP Configuration
       Input: Noise Filter A Sampling Clock Select: No Filter
       Input: Noise Filter B Sampling Clock Select: No Filter
       Interrupts: Callback: x_y_step_callback
-      Interrupts: Overflow/Crest Interrupt Priority: Disabled
+      Interrupts: Overflow/Crest Interrupt Priority: Priority 11
       Interrupts: Capture/Compare match A Interrupt Priority: Disabled
-      Interrupts: Capture/Compare match B Interrupt Priority: Priority 11
+      Interrupts: Capture/Compare match B Interrupt Priority: Disabled
       Interrupts: Underflow/Trough Interrupt Priority: Disabled
       Extra Features: Extra Features: Disabled
       Extra Features: Output Disable: POEG Link: POEG Channel 0

@@ -14,7 +14,6 @@ FSP_CPP_HEADER
 void R_BSP_WarmStart(bsp_warm_start_event_t event);
 FSP_CPP_FOOTER
 
-extern char Order;  // 外部变量 Order 的声明，表示命令字符
 /*电机控制参数*/
 extern int8_t motor_pwm_duty;
 extern _Bool motor_dir;
@@ -77,69 +76,6 @@ void hal_entry(void)
     R_BSP_NonSecureEnter();
 #endif
 }
-
-/**
- * @brief 处理用户输入的命令，执行相应的电机控制操作
- *
- * @return 无
- */
-void Process_Motor_Command(void)
-{
-    switch (Order) {
-        case 'S':  // 启动电机
-            Clear_Order;// 命令被处理后清空
-            Motor_Control_Start();  // 调用电机启动函数
-            MOTOR_PRINT("电机启动，当前PWM占空比 = %d%%\r\n", motor_pwm_duty);
-            break;
-
-        case 'P':  // 停止电机
-            Clear_Order;// 命令被处理后清空
-            Motor_Control_Stop();  // 调用电机停止函数
-            MOTOR_PRINT("************电机关闭************\r\n");
-            break;
-
-        case 'U':  // 增加电机PWM占空比（加速）
-            Clear_Order;// 命令被处理后清空
-            motor_pwm_duty += 10;  // 每次增加10%
-            if (motor_pwm_duty > 100) {
-                motor_pwm_duty = 100;  // 限制最大占空比为100%
-                MOTOR_PRINT("已到达最大占空比，当前电机PWM占空比 = %d%%\r\n", motor_pwm_duty);
-            } else {
-                Motor_Control_SetDirAndDuty(motor_dir, (uint8_t)motor_pwm_duty);  // 更新占空比
-                MOTOR_PRINT("电机加速，新的电机PWM占空比 = %d%%\r\n", motor_pwm_duty);
-            }
-            break;
-
-        case 'D':  // 减少电机PWM占空比（减速）
-            Clear_Order;// 命令被处理后清空
-            if (motor_pwm_duty < 10) {  // 避免减到负值
-                motor_pwm_duty = 0;
-                MOTOR_PRINT("已到达最小占空比，当前电机PWM占空比 = %d%%\r\n", motor_pwm_duty);
-            } else {
-                motor_pwm_duty -= 10;  // 每次减少10%
-                Motor_Control_SetDirAndDuty(motor_dir, (uint8_t)motor_pwm_duty);  // 更新占空比
-                MOTOR_PRINT("电机减速，新的电机PWM占空比 = %d%%\r\n", motor_pwm_duty);
-            }
-            break;
-
-        case 'R':  // 反转电机旋转方向
-            Clear_Order;// 命令被处理后清空
-            Motor_Control_Reverse();  // 调用电机方向反转函数
-            if (motor_dir == 1) {
-                MOTOR_PRINT("电机方向翻转，当前旋转方向：正向\n");
-            } else {
-                MOTOR_PRINT("电机方向翻转，当前旋转方向：反向\n");
-            }
-            break;
-
-        default:  // 无效命令
-
-            break;
-    }
-}
-
-
-
 
 /*******************************************************************************************************************//**
  * This function is called at various points during the startup process.  This implementation uses the event that is

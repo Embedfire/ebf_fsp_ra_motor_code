@@ -1,0 +1,3 @@
+# RASC version and installation file
+Unknown
+C:\IDE\RASC_5.4\eclipse\rascc.exe
